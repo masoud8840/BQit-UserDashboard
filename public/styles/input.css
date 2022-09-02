@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.navigation__link.active {
+  color: #FF9900;
+  background-color: rgba(255, 153, 0, 0.1);
+}
+
+.wallet {
+  color: #FF9900;
+}
+
+.profit {
+  color: #34BFA3;
+}
+
+.deposit {
+  color: #6F727D;
+}
+
+.withdrawal {
+  color: #F4516C;
+}
+
+.table__body .table__row:nth-child(even) {
+  @apply bg-[#F8F8FD]
+}
