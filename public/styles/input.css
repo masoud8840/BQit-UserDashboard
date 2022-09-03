@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 
-.navigation__link.active {
-  color: #FF9900;
-  background-color: rgba(255, 153, 0, 0.1);
-}
+
 
 .wallet {
   color: #FF9900;
@@ -36,7 +33,7 @@
     @apply mx-auto flex gap-5 py-5 xl:gap-[35px] max-w-7xl
   }
   .navigation__container {
-    @apply bg-white h-fit rounded-25px py-30px px-10px xl:w-[280px]
+    @apply bg-white h-fit rounded-25px py-30px px-10px md:w-[290px]
   }
   .logo__container {
     @apply border-b-[1px] border-b-[#393939]/20 pb-30px pt-10px
@@ -58,6 +55,135 @@
     @apply w-6
   }
   .navigation__text {
-    @apply hidden md:block
+    @apply hidden md:block text-base 
   }
+
+  /* Dashboard */
+  .dashboard {
+    @apply w-full flex flex-col gap-5
+  }
+  .dashboard__header {
+    @apply p-10px bg-white flex justify-end items-center rounded-25px
+  }
+  .btn__settings {
+    @apply p-1 rounded-25px bg-[#716ACA]/[6%]
+  }
+  .profile__badge {
+    @apply ml-2 flex items-center
+  }
+  .user__img {
+    @apply w-14 rounded-25px border-navigation__active border
+  }
+  .user__role {
+    @apply text-[#6D6D6D] text-[13px] font-light
+  }
+  .arrow__btn {
+    @apply ml-1 xl:ml-2 hover:bg-[#716ACA]/[6%] rounded-md
+  }
+
+  .dashboard__body {
+    @apply gap-5 flex flex-col xl:flex-row xl:flex-wrap xl:gap-[35px]
+  }
+  .profile-showcase__container {
+    @apply flex flex-col items-center bg-white rounded-25px py-5 xl:w-[285px] hover:drop-shadow-md transition-all duration-150
+  }
+  .profile-showcase__inner {
+    @apply flex flex-col justify-center items-center space-y-3 pb-5 border-b-[1px] border-b-[#393939]/10 w-fit m-auto
+  }
+  .user__name {
+    @apply text-[23px] text-normal
+  }
+  .user__email {
+    @apply text-[15px] text-normal font-light
+  }
+  .password-toggler {
+    @apply mr-1 hover:bg-[#716ACA]/[6%] rounded-md p-2
+  }
+  .user__password-character {
+    @apply flex items-center space-x-[2px]
+  }
+  .btn__primary {
+    @apply px-5 py-2 mt-6 text-white rounded-lg bg-invite-link drop-shadow
+  }
+  .total-payment__extra-informatin__container {
+    @apply flex flex-col gap-5 xl:gap-[35px] xl:w-[691px]
+  }
+  .total-payments {
+    @apply  flex flex-col sm:flex-row sm:grid sm:grid-cols-2 gap-5 xl:gap-[35px] xl:h-28
+  }
+  .total-payment__container {
+    @apply py-5 bg-white sm:w-full rounded-25px flex flex-col items-center p-10px sm:flex-row-reverse sm:justify-center sm:gap-5  hover:drop-shadow-md transition-all duration-150
+  }
+  .total-payment__img {
+    @apply w-12 sm:w-16
+  }
+  .total-payment__info {
+    @apply text-center mt-2 sm:text-start
+  }
+  .total-payment__title {
+    @apply text-lg text-normal sm:mb-10px
+  }
+  .total-payment__subtitle {
+    @apply text-[15px] text-invite-link
+  }
+  .extra-informations {
+    @apply space-y-5 sm:space-y-0  flex flex-wrap sm:grid sm:grid-cols-2 sm:gap-5 w-full lg:grid-cols-4
+  }
+  .extra-information__container {
+    @apply rounded-25px flex flex-col items-center w-full bg-white py-10px xl:py-6 xl:h-56 hover:drop-shadow-md transition-all duration-150
+  }
+  .extra-information__img {
+    @apply w-10
+  }
+  .extra-information__title {
+    @apply text-lg text-normal mt-2 xl:my-2
+  }
+  .extra-information__subtitle{
+    @apply my-1 text-sm text-normal font-light
+  }
+  .extra-information__amount {
+    @apply text-[15px] mt-auto
+  }
+  .statistics-tables {
+    @apply flex flex-col gap-5 lg:flex-row xl:w-full
+  }
+  .statistics-table__container {
+    @apply  lg:w-1/2 bg-white rounded-25px hover:drop-shadow-md transition-all duration-150
+  }
+  .statistics-table__header {
+    @apply  flex p-10px items-end border-b-[1px] border-[#393939]/10 xl:p-5
+  }
+  .statistics-table__title {
+    @apply text-lg mr-10px text-normal
+  }
+  .statistics-table__subtitle {
+    @apply text-normal text-[15px] font-light
+  }
+  .table {
+    @apply w-full mt-10px xl:mt-0 px-10px xl:p-5
+  }
+  .table__header{
+    @apply rounded-t-[10px] p-10px bg-invite-link grid
+  }
+  .table-header__title {
+    @apply text-white text-sm
+  }
+  .table__body {
+    @apply pb-10px
+  }
+  .table__row {
+    @apply rounded-[10px] grid p-10px
+  }
+  .table-row__data {
+    @apply text-xs font-light
+  }
+}
+
+
+.navigation__link.active {
+  color: #FF9900;
+  background-color: rgba(255, 153, 0, 0.1);
+}
+.navigation__link {
+  color: #6F727D;
 }
