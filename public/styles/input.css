@@ -22,8 +22,6 @@
 }
 
 
-
-
 @layer components {
   .table__body .table__row:nth-child(even) {
     @apply bg-[#F8F8FD]
@@ -62,7 +60,7 @@
   .dashboard {
     @apply w-full flex flex-col gap-5
   }
-  .dashboard__header {
+  .dashboard__header,.tree-diagram__header {
     @apply p-10px bg-white flex justify-end items-center rounded-25px
   }
   .btn__settings {
@@ -148,7 +146,7 @@
     @apply flex flex-col gap-5 lg:flex-row xl:w-full
   }
   .statistics-table__container {
-    @apply  lg:w-1/2 bg-white rounded-25px hover:drop-shadow-md transition-all duration-150
+    @apply  bg-white rounded-25px hover:drop-shadow-md transition-all duration-150
   }
   .statistics-table__header {
     @apply  flex p-10px items-end border-b-[1px] border-[#393939]/10 xl:p-5
@@ -176,6 +174,15 @@
   }
   .table-row__data {
     @apply text-xs font-light
+  }
+  .card {
+    @apply bg-white rounded-25px p-10px
+  }
+  .card__hover {
+    @apply hover:drop-shadow-md
+  }
+  .tree-diagram__tree ul:not(ul:first-child) {
+    @apply pl-10
   }
 }
 

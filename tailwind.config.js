@@ -5,7 +5,8 @@ module.exports = {
         extend: {
             borderRadius: {
                 '15px': '15px',
-                '25px': '25px'
+                '25px': '25px',
+                '10px': '10px'
             },
             padding: {
                 '10px': '10px',
@@ -19,7 +20,8 @@ module.exports = {
                 'navigation__active': "#FF9900",
                 "invite-link": "#5867DD",
                 'normal': '#4A4A4A',
-                'withdrawal-amount': '#F4516C'
+                'withdrawal-amount': '#F4516C',
+                'light': '#fafafa'
             },
             backgroundColor: {
                 "navigation__active": "#ff9900",
@@ -29,4 +31,9 @@ module.exports = {
         },
     },
     plugins: [],
+    darkMode: 'class',
 }
+
+// Darkmode colors
+// dark bg [#222831]
+// light bg [#393E46]
