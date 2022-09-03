@@ -24,6 +24,40 @@
   color: #F4516C;
 }
 
-.table__body .table__row:nth-child(even) {
-  @apply bg-[#F8F8FD]
+
+
+
+@layer components {
+  .table__body .table__row:nth-child(even) {
+    @apply bg-[#F8F8FD]
+  }
+
+  .container {
+    @apply mx-auto flex gap-5 py-5 xl:gap-[35px] max-w-7xl
+  }
+  .navigation__container {
+    @apply bg-white h-fit rounded-25px py-30px px-10px xl:w-[280px]
+  }
+  .logo__container {
+    @apply border-b-[1px] border-b-[#393939]/20 pb-30px pt-10px
+  }
+  .logo__img {
+    @apply w-14 md:m-auto
+  }
+
+  .navigation__inner {
+    @apply space-y-5 mt-5 flex flex-col items-center md:items-start
+  }
+  .navigation__list {
+    @apply md:w-full
+  }
+  .navigation__link {
+    @apply rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2
+  }
+  .navigation__img {
+    @apply w-6
+  }
+  .navigation__text {
+    @apply hidden md:block
+  }
 }

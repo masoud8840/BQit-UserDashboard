@@ -11,88 +11,96 @@
 </head>
 
 <body class="bg-[#fafafd]">
-    <div class="container mx-auto flex gap-5 py-5">
-        <nav class="navigation__container bg-white h-fit rounded-25px py-30px px-10px">
-            <div class="logo__container border-b-[1px] border-b-[#393939]/20 pb-30px pt-10px">
-                <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img w-14" />
+    <div class="container">
+        <nav class="navigation__container">
+            <div class="logo__container">
+                <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
             </div>
-            <ul class="navigation__inner space-y-6 mt-5 flex flex-col items-center">
+            <ul class="navigation__inner">
                 <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center p-2 active">
+                    <a href="#dashboard" class="navigation__link active">
                         <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img"
-                            class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Dashboard</span>
+                            class="navigation__img" />
+                        <span class="navigation__text">Dashboard</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Jineology.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Jineology</span>
+                        <span class="navigation__text hidden md:block">Jineology</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Tree Diagram</span>
+                        <span class="navigation__text hidden md:block">Tree Diagram</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Deposit Requests</span>
+                        <span class="navigation__text hidden md:block">Deposit Requests</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/User_Management.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">User Management</span>
+                        <span class="navigation__text hidden md:block">User Management</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Withdraw Requests/span>
+                        <span class="navigation__text hidden md:block">Withdraw Requests</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Gallery_Management.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Gallery Management</span>
+                        <span class="navigation__text hidden md:block">Gallery Management</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Admin_Management.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Admin Management</span>
+                        <span class="navigation__text hidden md:block">Admin Management</span>
                     </a>
                 </li>
-                <li class="navigation__list">
-                    <a href="#dashboard" class="navigation__link rounded-15px flex flex-col items-center">
+                <li class="navigation__list md:w-full">
+                    <a href="#dashboard"
+                        class="navigation__link rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2">
                         <img src="/public/images/icon/menu/Reports.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Reports</span>
+                        <span class="navigation__text hidden md:block">Reports</span>
                     </a>
                 </li>
-                <li class="navigation__list">
+                <li class="navigation__list md:w-full">
                     <a href="#dashboard"
-                        class="navigation__link rounded-15px link__logout flex flex-col items-center  mt-20">
+                        class="navigation__link rounded-15px link__logout flex flex-col md:flex-row md:gap-3 items-center p-2  mt-20">
                         <img src="/public/images/icon/menu/Logout.svg" alt="dashboard-img"
                             class="navigation__img w-6" />
-                        <span class="navigation__text hidden">Logout</span>
+                        <span class="navigation__text hidden md:block">Logout</span>
                     </a>
                 </li>
             </ul>
         </nav>
         <section class="dashboard w-full flex flex-col gap-5">
             <div class="dashboard__header p-10px bg-white flex justify-end items-center rounded-25px">
-                <button class="btn__settings bg-red-50 p-1 rounded-25px bg-[#716ACA]/[6%]">
+                <button class="btn__settings p-1 rounded-25px bg-[#716ACA]/[6%]">
                     <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5">
                 </button>
                 <div class="profile__badge ml-2 flex items-center">
@@ -107,8 +115,9 @@
                     </a>
                 </div>
             </div>
-            <div class="dashboard__body gap-5 flex flex-col">
-                <section class="profile-showcase__container flex flex-col items-center bg-white rounded-25px py-5">
+            <div class="dashboard__body gap-5 flex flex-col xl:flex-row xl:flex-wrap xl:gap-[35px]">
+                <section
+                    class="profile-showcase__container flex flex-col items-center bg-white rounded-25px py-5 xl:w-[292px] hover:drop-shadow-md transition-all duration-150">
                     <div
                         class="profile-showcase__inner flex flex-col justify-center items-center space-y-3 pb-5 border-b-[1px] border-b-[#393939]/10 w-fit m-auto ">
                         <img src="/public/images/Profile.svg" alt="user-img"
@@ -133,79 +142,80 @@
                         Link</a>
                 </section>
 
-                <div class="flex flex-col gap-5">
-                    <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-5 xl:gap-[35px] xl:grid-rows-2">
+                    <div class="flex flex-col sm:flex-row sm:grid sm:grid-cols-2 gap-5 xl:gap-[35px] xl:h-28">
                         <section
-                            class="total-payment__container bg-white rounded-25px flex flex-col items-center py-10px">
+                            class="total-payment__container py-5 bg-white sm:w-full rounded-25px flex flex-col items-center p-10px sm:flex-row-reverse sm:justify-center sm:gap-5  hover:drop-shadow-md transition-all duration-150">
                             <img src="/public/images/icon/dashboard/Total_Leg_Payment.svg" alt="total-payment__img"
-                                class="total-payment__img w-12">
-                            <div class="total-payment__info text-center mt-2">
-                                <p class="total-payment__title text-lg text-normal">Total Leg 1 Payment</p>
+                                class="total-payment__img w-12 sm:w-16">
+                            <div class="total-payment__info text-center mt-2 sm:text-start">
+                                <p class="total-payment__title text-lg text-normal sm:mb-10px">Total Leg 1 Payment</p>
                                 <span class="total-payment__subtitle text-[15px] text-invite-link">10,209,000 TRX</span>
                             </div>
                         </section>
                         <section
-                            class="total-payment__container bg-white rounded-25px flex flex-col items-center py-10px">
+                            class="total-payment__container py-5 bg-white sm:w-full rounded-25px flex flex-col items-center p-10px sm:flex-row-reverse sm:justify-center sm:gap-5  hover:drop-shadow-md transition-all duration-150">
                             <img src="/public/images/icon/dashboard/Total_Leg_Payment.svg" alt="total-payment__img"
-                                class="total-payment__img w-12">
-                            <div class="total-payment__info text-center mt-2">
-                                <p class="total-payment__title text-lg text-normal">Total Leg 1 Payment</p>
+                                class="total-payment__img w-12 sm:w-16">
+                            <div class="total-payment__info text-center mt-2 sm:text-start">
+                                <p class="total-payment__title text-lg text-normal sm:mb-10px">Total Leg 1 Payment</p>
                                 <span class="total-payment__subtitle text-[15px] text-invite-link">10,209,000 TRX</span>
                             </div>
                         </section>
                     </div>
-                    <div class="space-y-5 flex flex-wrap w-full">
+                    <div
+                        class="space-y-5 sm:space-y-0 flex flex-wrap sm:grid sm:grid-cols-2 sm:gap-x-[35px] w-full lg:grid-cols-4">
                         <section
-                            class="extra-information__container rounded-25px flex flex-col items-center w-full py-10px bg-white">
+                            class="extra-information__container xl:px-10px rounded-25px flex flex-col items-center w-full bg-white py-10px xl:py-6 xl:h-full hover:drop-shadow-md transition-all duration-150">
                             <img src="/public/images/icon/dashboard/Wallet.svg" alt="wallet-img"
                                 class="extra-information__img w-10">
-                            <h4 class="extra-information__title text-lg text-normal mt-2">Wallet</h4>
+                            <h4 class="extra-information__title text-lg text-normal mt-2 xl:my-2">Wallet</h4>
                             <p class="extra-information__subtitle my-1 text-sm text-normal font-light">
                                 Total Referral Profit
                             </p>
-                            <span class="extra-information__amount text-[15px] wallet">16,247 TRX</span>
+                            <span class="extra-information__amount text-[15px] wallet mt-4">16,247 TRX</span>
                         </section>
                         <section
-                            class="extra-information__container rounded-25px flex flex-col items-center w-full py-10px bg-white">
-                            <img src="/public/images/icon/dashboard/Profit.svg" alt="wallet-img"
+                            class="extra-information__container xl:px-10px rounded-25px flex flex-col items-center w-full bg-white py-10px xl:py-6 xl:h-full hover:drop-shadow-md transition-all duration-150">
+                            <img src="/public/images/icon/dashboard/Profit.svg" alt="profit-img"
                                 class="extra-information__img w-10">
-                            <h4 class="extra-information__title text-lg text-normal mt-2">Profit</h4>
+                            <h4 class="extra-information__title text-lg text-normal mt-2 xl:my-2">Profit</h4>
                             <p class="extra-information__subtitle my-1 text-sm text-normal font-light">
                                 Last Day Profit
                             </p>
-                            <span class="extra-information__amount text-[15px] profit">16,247 TRX</span>
+                            <span class="extra-information__amount text-[15px] profit mt-4">16,247 TRX</span>
                         </section>
                         <section
-                            class="extra-information__container rounded-25px flex flex-col items-center w-full py-10px bg-white">
-                            <img src="/public/images/icon/dashboard/Deposits.svg" alt="wallet-img"
+                            class="extra-information__container xl:px-10px rounded-25px flex flex-col items-center w-full bg-white py-10px xl:py-6 xl:h-full hover:drop-shadow-md transition-all duration-150">
+                            <img src="/public/images/icon/dashboard/Deposits.svg" alt="deposit-img"
                                 class="extra-information__img w-10">
-                            <h4 class="extra-information__title text-lg text-normal mt-2">Deposits</h4>
+                            <h4 class="extra-information__title text-lg text-normal mt-2 xl:my-2">Deposits</h4>
                             <p class="extra-information__subtitle my-1 text-sm text-normal font-light">
                                 Total Deposit Amount
                             </p>
-                            <span class="extra-information__amount text-[15px] deposit">16,247 TRX</span>
+                            <span class="extra-information__amount text-[15px] deposit mt-4">16,247 TRX</span>
                         </section>
                         <section
-                            class="extra-information__container rounded-25px flex flex-col items-center w-full py-10px bg-white">
-                            <img src="/public/images/icon/dashboard/Withdrawals.svg" alt="wallet-img"
+                            class="extra-information__container xl:px-10px rounded-25px flex flex-col items-center w-full bg-white py-10px xl:py-6 xl:h-full hover:drop-shadow-md transition-all duration-150">
+                            <img src="/public/images/icon/dashboard/Withdrawals.svg" alt="deposit-img"
                                 class="extra-information__img w-10">
-                            <h4 class="extra-information__title text-lg text-normal mt-2">Withdrawals</h4>
+                            <h4 class="extra-information__title text-lg text-normal mt-2 xl:my-2">Withdrawals</h4>
                             <p class="extra-information__subtitle my-1 text-sm text-normal font-light">
-                                Total Withdrawal Amount
+                                Total Deposit Amount
                             </p>
-                            <span class="extra-information__amount text-[15px] withdrawal">16,247 TRX</span>
+                            <span class="extra-information__amount text-[15px] withdrawal mt-4">16,247 TRX</span>
                         </section>
-                        <section class="extra-information__container"></section>
-                        <section class="extra-information__container"></section>
                     </div>
                 </div>
-                <section class="statistics-tables flex flex-col gap-5">
-                    <div class="statistics-table__container bg-white rounded-25px">
-                        <div class="statistics-table__header flex p-10px items-end border-b-[1px] border-[#393939]/10">
+                <section class="statistics-tables flex flex-col gap-5 lg:flex-row xl:w-full">
+                    <div
+                        class="statistics-table__container lg:w-1/2 bg-white rounded-25px  hover:drop-shadow-md transition-all duration-150">
+                        <div
+                            class="statistics-table__header flex p-10px items-end border-b-[1px] border-[#393939]/10 xl:p-5">
                             <h4 class="text-lg mr-10px text-normal">Referral Profits</h4>
                             <p class="text-normal text-[15px] font-light">(Last 20 items)</p>
                         </div>
-                        <div class="table w-full mt-10px px-10px">
+                        <div class="table w-full mt-10px xl:mt-0 px-10px xl:p-5">
                             <div class="table__header rounded-t-[10px] p-10px bg-invite-link grid grid-cols-3">
                                 <h4 class="text-white text-sm">Date</h4>
                                 <h4 class="text-white text-sm">Profit (TRX)</h4>
@@ -214,43 +224,45 @@
                             <div class="table__body pb-10px">
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="statistics-table__container bg-white rounded-25px">
-                        <div class="statistics-table__header flex p-10px items-end border-b-[1px] border-[#393939]/10">
+                    <div
+                        class="statistics-table__container lg:w-1/2 bg-white rounded-25px  hover:drop-shadow-md transition-all duration-150">
+                        <div
+                            class="statistics-table__header flex p-10px items-end border-b-[1px] border-[#393939]/10 xl:p-5">
                             <h4 class="text-lg mr-10px text-normal">Deposit Profits</h4>
                             <p class="text-normal text-[15px] font-light">(Last 20 items)</p>
                         </div>
-                        <div class="table w-full mt-10px px-10px">
+                        <div class="table w-full mt-10px xl:mt-0 px-10px xl:p-5">
                             <div class="table__header rounded-t-[10px] p-10px bg-invite-link grid grid-cols-3">
                                 <h4 class="text-white text-sm">Date</h4>
                                 <h4 class="text-white text-sm">Profit (TRX)</h4>
@@ -259,33 +271,33 @@
                             <div class="table__body pb-10px">
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                                 <div class="table__row rounded-[10px] grid grid-cols-3 p-10px">
                                     <span class="text-normal text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link text-xs font-light">2022-10-02 00:00:02</span>
-                                    <span class="text-withdrawal-amount text-xs font-light">2022-10-02 00:00:02</span>
+                                    <span class="text-invite-link text-xs font-light">125 TRX</span>
+                                    <span class="text-withdrawal-amount text-xs font-light">25,500 TRX</span>
                                 </div>
                             </div>
                         </div>
