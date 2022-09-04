@@ -11,7 +11,7 @@
   <!-- <script src="https://unpkg.com/vue@3"></script> -->
   <!-- Linking script file -->
   <script src="/public/scripts/script.js" defer></script>
-  <title>qbit | Deposit Requests</title>
+  <title>qbit | User Management</title>
 </head>
 
 <body class="bg-[#fafafe]">
@@ -40,15 +40,16 @@
           </a>
         </li>
         <li class="navigation__list md:w-full">
-          <a href="./DepositRequests.html" class="navigation__link active">
-            <img src="/public/images/icon/menu/Deposit_Requests_Active.svg" alt="deposit-request-img"
+          <a href="./DepositRequests.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
               class="navigation__img" />
             <span class="navigation__text">Deposit Requests</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="./UserManagement.html" class="navigation__link">
-            <img src="/public/images/icon/menu/User_Management.svg" alt="user-management-img" class="navigation__img" />
+          <a href="./UserManagement.html" class="navigation__link active">
+            <img src="/public/images/icon/menu/User_Management_Active.svg" alt="user-management-img"
+              class="navigation__img" />
             <span class="navigation__text">User Management</span>
           </a>
         </li>
@@ -89,7 +90,7 @@
     </nav>
     <div class="statistics-table__container overflow-auto lg:w-full">
       <div class="statistics-table__header py-0 items-center justify-between">
-        <h4 class="statistics-table__title">Deposit Requests</h4>
+        <h4 class="statistics-table__title">User Management</h4>
         <ul class="flex gap-[15px]">
           <li>
             <button class="table__btn text-sm lg:text-lg table-btn__active"
@@ -98,52 +99,57 @@
           </li>
           <li>
             <button class="table__btn text-sm lg:text-lg"
-              onclick="toggleDepositRequestsTabs('history requests', this)">Hisstory Requests</button>
+              onclick="toggleDepositRequestsTabs('pending users', this)">Pending Users</button>
           </li>
         </ul>
       </div>
-      <div class="statistics-table__subheader flex flex-col gap-[10px] p-10px">
-        <h4 class="text-[15px] text-normal font-light">Group Actions</h4>
-        <div class="pl-5 flex gap-2">
-          <button onclick="togglePopup('approve')"
-            class="btn__green flex items-center gap-1 bg-profit-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-            <img src="/public/images/icon/deposit_requests/Check.svg" alt="check-img" />
-            Approve
-          </button>
-          <button onclick="togglePopup('deleted')"
-            class="btn__red flex items-center gap-1 bg-withdrawal-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-            <img src="/public/images/icon/deposit_requests/Delete.svg" alt="delete-img" />
-            Delete
-          </button>
+      <div class="statistics-table__subheader search__subheader grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-10px">
+        <div class="input-group gap-1 max-w-[300px] flex flex-col">
+          <label for="email" class="text-normal font-light">Email:</label>
+          <input type="email" id="email" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+            placeholder="Enter Email...">
+        </div>
+        <div class="input-group gap-1 max-w-[300px] flex flex-col">
+          <label for="walletAddress" class="text-normal font-light">Wallet Address:</label>
+          <input type="text" id="walletAddress" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+            placeholder="Enter Wallet Address...">
+        </div>
+        <div class="input-group gap-1 max-w-[300px] flex flex-col">
+          <label for="referenceCode" class="text-normal font-light">Reference Code:</label>
+          <input type="text" id="referenceCode" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+            placeholder="Enter Reference Code...">
+        </div>
+        <div class="input-group gap-1 max-w-[300px] flex flex-col">
+          <button class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">Search</button>
         </div>
       </div>
       <div class="active-users__table overflow-auto">
-        <div class="table deposit-requests__table w-full p-5 pt-10px min-w-[1300px]">
+        <div class="table user-management__table w-full p-5 pt-10px min-w-[1300px]">
           <div class="table__header">
             <div class="flex justify-center items-center">
               <input type="checkbox" onchange="selectAllTableRows(this)"
                 class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
             </div>
             <div>
-              <h4 class="table-header__title">Request ID</h4>
+              <h4 class="table-header__title">User ID</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Username</h4>
+              <h4 class="table-header__title">Name</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Amount</h4>
+              <h4 class="table-header__title">Email</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Transaction_hash</h4>
+              <h4 class="table-header__title">Code</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Wallet Address</h4>
+              <h4 class="table-header__title">Wallet</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Status</h4>
+              <h4 class="table-header__title">Created At</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Confirmed At</h4>
+              <h4 class="table-header__title">Role</h4>
             </div>
             <div class="flex justify-center">
               <h4 class="table-header__title">Action</h4>
@@ -157,20 +163,18 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Hesam</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">IN_PROGRESS</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
+              <span class="table-row__data">2022-08-02 08:15:14</span>
+              <span class="table-row__data badge badge__green">Change To Admin
               </span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -180,20 +184,18 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Hesam</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">IN_PROGRESS</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
+              <span class="table-row__data">2022-08-02 08:15:14</span>
+              <span class="table-row__data badge badge__green">Change To Admin
               </span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -203,20 +205,18 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Hesam</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">IN_PROGRESS</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
+              <span class="table-row__data">2022-08-02 08:15:14</span>
+              <span class="table-row__data badge badge__green">Change To Admin
               </span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -226,53 +226,48 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Hesam</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">IN_PROGRESS</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
+              <span class="table-row__data">2022-08-02 08:15:14</span>
+              <span class="table-row__data badge badge__green">Change To Admin
               </span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- History Requests -->
-      <div class="history-requests__table hidden overflow-auto">
-        <div class="table deposit-requests__table w-full p-5 pt-10px min-w-[1300px]">
+      <!-- pending users -->
+      <div class="pending-users__table hidden overflow-auto">
+        <div class="table user-management__table w-full p-5 pt-10px min-w-[1100px]">
           <div class="table__header">
             <div class="flex justify-center items-center">
               <input type="checkbox" onchange="selectAllTableRows(this)"
                 class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
             </div>
             <div>
-              <h4 class="table-header__title">Request ID</h4>
+              <h4 class="table-header__title">User ID</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Username</h4>
+              <h4 class="table-header__title">Name</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Amount</h4>
+              <h4 class="table-header__title">Email</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Transaction_hash</h4>
+              <h4 class="table-header__title">Referred from</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Wallet Address</h4>
+              <h4 class="table-header__title">Wallet</h4>
             </div>
             <div>
-              <h4 class="table-header__title">Status</h4>
-            </div>
-            <div>
-              <h4 class="table-header__title">Confirmed At</h4>
+              <h4 class="table-header__title">Created At</h4>
             </div>
             <div class="flex justify-center">
               <h4 class="table-header__title">Action</h4>
@@ -286,20 +281,16 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Mohammad</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">Active</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
-              </span>
+              <span class="table-row__data">2022-08-02 08:15:14</span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -309,20 +300,16 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Mohammad</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">Active</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
-              </span>
+              <span class="table-row__data">2022-08-02 08:15:14</span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -332,20 +319,16 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Mohammad</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">Active</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
-              </span>
+              <span class="table-row__data">2022-08-02 08:15:14</span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
             <div class="table__row hover:bg-[#716aca]/[6%] items-center">
@@ -355,42 +338,40 @@
               </div>
               <span class="text-normal table-row__data">1925</span>
               <span class="text-normal table-row__data">Mohammad</span>
-              <span class="text-normal table-row__data">1800</span>
+              <span class="text-normal table-row__data">0945464864853@gmail.com</span>
               <span class="text-invite-link table-row__data">
-                372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                g9526Rwasd6
               </span>
               <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-              <span class="table-row__data badge badge-green">Active</span>
-              <span class="text-normal table-row__data">2022-08-28 08:51:57
-              </span>
+              <span class="table-row__data">2022-08-02 08:15:14</span>
               <div class="table-row__data flex justify-center gap-2">
                 <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
                   <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                 </button>
-                <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
-                    src="/public/images/icon/deposit_requests/Other_Options.svg" alt="options-img" class="w-5" /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-      <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-      <div class="border-r-green-400 border-r-4 pr-3">
-        <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-        <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
-      </div>
+  </div>
+  </div>
+  <div
+    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
+    <div class="border-r-green-400 border-r-4 pr-3">
+      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
     </div>
-    <div
-      class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-      <img src="/public/images/icon/pop-up/Delete.png" alt="pop-up-img" class="w-7 md:w-12">
-      <div class="border-r-red-400 border-r-4 pr-3">
-        <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-        <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
-      </div>
+  </div>
+  <div
+    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
+    <div class="border-r-red-400 border-r-4 pr-3">
+      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
     </div>
+  </div>
 
   </div>
 </body>

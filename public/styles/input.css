@@ -222,7 +222,7 @@
   gap: 10px;
 }
 
-.deposit-requests__table .table__body .table__row div input[type='checkbox']:checked {
+.deposit-requests__table .table__body .table__row div input[type='checkbox']:checked ,.user-management__table .table__body .table__row div input[type='checkbox']:checked {
   background-image: url('/public/images/icon/deposit_requests/Check.svg');
   background-position: center;
 }
@@ -230,4 +230,21 @@
 input.table-header__title:checked {
   background-image: url('/public/images/icon/deposit_requests/Check.svg');
   background-position: center;
+}
+.active-users__table .user-management__table .table__header {
+  display: grid;
+  grid-template-columns: .1fr .2fr .23fr .35fr .2fr .55fr .3fr .25fr .2fr;
+}
+.active-users__table .user-management__table .table__row {
+  display: grid;
+  grid-template-columns: .1fr .2fr .23fr .35fr .2fr .55fr .3fr .25fr .2fr;
+}
+
+.pending-users__table .user-management__table .table__header{
+  display: grid;
+  grid-template-columns: .1fr .16fr .2fr .35fr .2fr .55fr .23fr .16fr;
+}
+.pending-users__table .user-management__table .table__row{
+  display: grid;
+  grid-template-columns: .1fr .16fr .2fr .35fr .2fr .55fr .23fr .16fr;
 }

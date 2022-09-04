@@ -22,12 +22,14 @@ module.exports = {
                 'normal': '#4A4A4A',
                 'withdrawal-amount': '#F4516C',
                 'light': '#fafafa',
-                'profot-amount': '#34BFA3'
+                'profot-amount': '#34BFA3',
+                'search-btn': '#34BFA3'
             },
             backgroundColor: {
                 "navigation__active": "#ff9900",
                 "invite-link": "#5867DD",
-                'profit-amount': '#34BFA3'
+                'profit-amount': '#34BFA3',
+                'search-btn': '#34BFA3'
                 // 'withdrawal-amount': '#F4516C'
             },
         },
