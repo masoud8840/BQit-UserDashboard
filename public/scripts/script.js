@@ -1,63 +1,69 @@
-// const { createApp } = Vue
-// createApp({
-//   data() {
-//     return {
-//       message: 'Hello Vue!',
-//       referralTreeDiagram: [
-//         {
-//           title: "Admin - Code: 51463212 - TRX",
-//           childs: [
-//             {
-//               title: "Admin - Code: 15202 - TRX"
-//             },
-//             {
-//               title: "Admin - Code: 15202 - TRX"
-//             }
-//           ]
-//         },
-//         {
-//           title: "Admin - Code: 12314443 - TRX",
-//           childs: [
-//             {
-//               title: "Admin - Code: 15202 - TRX"
-//             },
-//             {
-//               title: "Admin - Code: 15202 - TRX"
-//             }
-//           ]
-//         }
-//       ]
-//     }
-//   }
-// }).mount('.container')
+// Toggle 'deposit requests' tables
 
 
-const referralDiagramTree = [
-  {
-    title: "",
-    children: [
-      {
-        title: "Admin - Code: 15202 - TRX",
-      }
-    ]
-  },
-  {
-    title: "Admin - Code: 15202 - TRX",
-  },
-]
+let currentTab = 'active users';
+const toggleDepositRequestsTabs = (clickedTab, htmlEl) => {
+    const activeUsersTable = document.querySelector('.active-users__table');
+    const historyRequestsTable = document.querySelector('.history-requests__table');
+    const tableBtns = document.querySelectorAll(".table__btn");
+    tableBtns.forEach(btn => {
+        btn.classList.remove('table-btn__active')
+    })
+    htmlEl.classList.add("table-btn__active")
+    if (clickedTab === 'active users') {
+        activeUsersTable.style.display = 'flex';
+        historyRequestsTable.style.display = 'none'
+        currentTab = 'active users'
+    } else {
+        activeUsersTable.style.display = 'none';
+        historyRequestsTable.style.display = 'flex'
+        currentTab = 'history requests'
+    }
+}
+
+// Toggle all rows checkboxes
+const selectAllTableRows = (input) => {
+    const activeUsersTableInputs = document.querySelectorAll('.active-users__table .table__row input');
+    const historyRequestsTableInputs = document.querySelectorAll('.history-requests__table .table__row input')
+
+    if (input.checked) {
+        if (currentTab === 'active users') {
+            activeUsersTableInputs.forEach(input => {
+                input.checked = true
+            })
+        } else {
+            historyRequestsTableInputs.forEach(input => {
+                input.checked = true
+            })
+        }
+    } else {
+        if (currentTab === 'active users') {
+            activeUsersTableInputs.forEach(input => {
+                input.checked = false
+            })
+        } else {
+            historyRequestsTableInputs.forEach(input => {
+                input.checked = false
+            })
+        }
+    }
+}
 
 
+// Toggle 'deposit requests' PopUp
+const togglePopup = (type) => {
+    const approvedPopUp = document.querySelector('.pop-up__approved');
+    const deletedPopUp = document.querySelector('.pop-up__deleted')
+    if (type === 'approve') {
+        approvedPopUp.style.display = 'flex'
+        deletedPopUp.style.display = 'none'
 
-
-const template = `<ul class="w-fit space-y-[5px]">
-<li
-    class="dropdown border-navigation__text border rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
-    <img src="/public/images/icon/tree_diagram/Arrow_Right.svg" alt="arrow-img"
-        class="arrow__img">
-    <img src="/public/images/icon/tree_diagram/User_Icon.svg" alt="user-img"
-        class="user__icon mx-1">
-    <p>Admin - Code: 15202 - TRX</p>
-</li>
-</ul>`
-const tree = document.querySelectorAll('.tree-diagram__tree li');
-
+    } else {
+        deletedPopUp.style.display = 'flex'
+        approvedPopUp.style.display = 'none'
+    }
+    setTimeout(() => {
+        approvedPopUp.style.display = 'none'
+        deletedPopUp.style.display = 'none'
+    }, 2000)
+}

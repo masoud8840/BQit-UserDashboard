@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,262 +11,410 @@
     <!-- Linking script file -->
     <script src="/public/scripts/script.js" defer></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body class="bg-[#fafafd]">
+  <body class="bg-[#fafafd]">
     <div class="container">
-        <nav class="navigation__container">
-            <div class="logo__container">
-                <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
+      <nav class="navigation__container">
+        <div class="logo__container">
+          <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
+        </div>
+        <ul class="navigation__inner">
+          <li class="navigation__list">
+            <a href="./index.html" class="navigation__link active">
+              <img
+                src="/public/images/icon/menu/Dashboard_Active.svg"
+                alt="dashboard-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Dashboard</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#joineology" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Jineology.svg"
+                alt="jineology-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Jineology</span>
+            </a>
+          </li>
+          <li class="navigation__list md:w-full">
+            <a href="./TreeDiagram.html" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Tree_Diagram.svg"
+                alt="tree-diagram-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Tree Diagram</span>
+            </a>
+          </li>
+          <li class="navigation__list md:w-full">
+            <a href="./DepositRequests.html" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Deposite_Requests.svg"
+                alt="deposit-request-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Deposit Requests</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#user-management" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/User_Management.svg"
+                alt="user-management-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">User Management</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#withdraw-requests" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Withdraw_Request.svg"
+                alt="withdraw-requests-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Withdraw Requests</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#gallery-management" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Gallery_Management.svg"
+                alt="gallery-management-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Gallery Management</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#admin-management" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Admin_Management.svg"
+                alt="admin-management-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Admin Management</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#reports" class="navigation__link">
+              <img
+                src="/public/images/icon/menu/Reports.svg"
+                alt="reports-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Reports</span>
+            </a>
+          </li>
+          <li class="navigation__list">
+            <a href="#logout" class="navigation__link mt-20">
+              <img
+                src="/public/images/icon/menu/Logout.svg"
+                alt="logout-img"
+                class="navigation__img"
+              />
+              <span class="navigation__text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="dashboard">
+        <div class="dashboard__header">
+          <button class="btn__settings">
+            <img
+              src="/public/images/icon/dashboard/Settings.svg"
+              alt="settings-img"
+              class="w-5"
+            />
+          </button>
+          <div class="profile__badge">
+            <img
+              src="/public/images/Profile.svg"
+              alt="profile-img"
+              class="user__img"
+            />
+            <div class="profile-badge__text ml-2">
+              <p class="user__name text-normal">Hesam Safari</p>
+              <span class="user__role">Admin</span>
             </div>
-            <ul class="navigation__inner">
-                <li class="navigation__list">
-                    <a href="./index.html" class="navigation__link active">
-                        <img src="/public/images/icon/menu/Dashboard_Active.svg" alt="dashboard-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#joineology" class="navigation__link">
-                        <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
-                        <span class="navigation__text">Jineology</span>
-                    </a>
-                </li>
-                <li class="navigation__list md:w-full">
-                    <a href="./TreeDiagram.html" class="navigation__link">
-                        <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Tree Diagram</span>
-                    </a>
-                </li>
-                <li class="navigation__list md:w-full">
-                    <a href="./DepositRequests.html" class="navigation__link">
-                        <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Deposit Requests</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#user-management" class="navigation__link">
-                        <img src="/public/images/icon/menu/User_Management.svg" alt="user-management-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">User Management</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#withdraw-requests" class="navigation__link">
-                        <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Withdraw Requests</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#gallery-management" class="navigation__link">
-                        <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Gallery Management</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#admin-management" class="navigation__link">
-                        <img src="/public/images/icon/menu/Admin_Management.svg" alt="admin-management-img"
-                            class="navigation__img" />
-                        <span class="navigation__text">Admin Management</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#reports" class="navigation__link">
-                        <img src="/public/images/icon/menu/Reports.svg" alt="reports-img" class="navigation__img" />
-                        <span class="navigation__text">Reports</span>
-                    </a>
-                </li>
-                <li class="navigation__list">
-                    <a href="#logout" class="navigation__link mt-20">
-                        <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
-                        <span class="navigation__text">Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <section class="dashboard">
-            <div class="dashboard__header">
-                <button class="btn__settings">
-                    <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
+            <a href="#arrow" class="arrow__btn">
+              <img
+                src="/public/images/icon/dashboard/Arrow_Down.svg"
+                alt="arrow-img"
+                class="w-5 mb-auto"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="dashboard__body">
+          <section class="profile-showcase__container">
+            <div class="profile-showcase__inner">
+              <img
+                src="/public/images/Profile.svg"
+                alt="user-img"
+                class="user__img w-28"
+              />
+              <h4 class="user__name">Hesam Safari</h4>
+              <p class="user__email">hesamsafari@gmail.com</p>
+              <div class="user__password flex">
+                <button class="password-toggler">
+                  <img
+                    src="/public/images/icon/dashboard/Eye.svg"
+                    alt="eye-img"
+                  />
                 </button>
-                <div class="profile__badge">
-                    <img src="/public/images/Profile.svg" alt="profile-img" class="user__img" />
-                    <div class="profile-badge__text ml-2">
-                        <p class="user__name text-normal">Hesam Safari</p>
-                        <span class="user__role">Admin</span>
-                    </div>
-                    <a href="#arrow" class="arrow__btn">
-                        <img src="/public/images/icon/dashboard/Arrow_Down.svg" alt="arrow-img" class="w-5 mb-auto" />
-                    </a>
+                <div class="user__password-character">
+                  <img
+                    src="/public/images/icon/dashboard/PasswordCharecter.svg"
+                    alt="password"
+                  />
+                  <img
+                    src="/public/images/icon/dashboard/PasswordCharecter.svg"
+                    alt="password"
+                  />
+                  <img
+                    src="/public/images/icon/dashboard/PasswordCharecter.svg"
+                    alt="password"
+                  />
+                  <img
+                    src="/public/images/icon/dashboard/PasswordCharecter.svg"
+                    alt="password"
+                  />
+                  <img
+                    src="/public/images/icon/dashboard/PasswordCharecter.svg"
+                    alt="password"
+                  />
                 </div>
+              </div>
             </div>
-            <div class="dashboard__body">
-                <section class="profile-showcase__container">
-                    <div class="profile-showcase__inner">
-                        <img src="/public/images/Profile.svg" alt="user-img" class="user__img w-28" />
-                        <h4 class="user__name">Hesam Safari</h4>
-                        <p class="user__email">hesamsafari@gmail.com</p>
-                        <div class="user__password flex">
-                            <button class="password-toggler">
-                                <img src="/public/images/icon/dashboard/Eye.svg" alt="eye-img" />
-                            </button>
-                            <div class="user__password-character">
-                                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
-                                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
-                                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
-                                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
-                                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#invite_link" class="btn__primary">Invite Link</a>
-                </section>
+            <a href="#invite_link" class="btn__primary">Invite Link</a>
+          </section>
 
-                <div class="total-payment__extra-informatin__container">
-                    <div class="total-payments">
-                        <section class="total-payment__container">
-                            <img src="/public/images/icon/dashboard/Total_Leg_Payment.svg" alt="total-payment__img"
-                                class="total-payment__img" />
-                            <div class="total-payment__info">
-                                <p class="total-payment__title">Total Leg 1 Payment</p>
-                                <span class="total-payment__subtitle">10,209,000 TRX</span>
-                            </div>
-                        </section>
-                        <section class="total-payment__container">
-                            <img src="/public/images/icon/dashboard/Total_Leg_Payment.svg" alt="total-payment__img"
-                                class="total-payment__img" />
-                            <div class="total-payment__info">
-                                <p class="total-payment__title">Total Leg 1 Payment</p>
-                                <span class="total-payment__subtitle">10,209,000 TRX</span>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="extra-informations">
-                        <section class="extra-information__container">
-                            <img src="/public/images/icon/dashboard/Wallet.svg" alt="wallet-img"
-                                class="extra-information__img" />
-                            <h4 class="extra-information__title">Wallet</h4>
-                            <p class="extra-information__subtitle">Total Referral Profit</p>
-                            <span class="extra-information__amount wallet">
-                                16,247 TRX
-                            </span>
-                        </section>
-                        <section class="extra-information__container">
-                            <img src="/public/images/icon/dashboard/Profit.svg" alt="profit-img"
-                                class="extra-information__img" />
-                            <h4 class="extra-information__title">Profit</h4>
-                            <p class="extra-information__subtitle">Last Day Profit</p>
-                            <span class="extra-information__amount profit">16,247 TRX</span>
-                        </section>
-                        <section class="extra-information__container">
-                            <img src="/public/images/icon/dashboard/Deposits.svg" alt="deposit-img"
-                                class="extra-information__img" />
-                            <h4 class="extra-information__title">Deposits</h4>
-                            <p class="extra-information__subtitle">Total Deposit Amount</p>
-                            <span class="extra-information__amount deposit">16,247 TRX</span>
-                        </section>
-                        <section class="extra-information__container">
-                            <img src="/public/images/icon/dashboard/Withdrawals.svg" alt="deposit-img"
-                                class="extra-information__img" />
-                            <h4 class="extra-information__title">Withdrawals</h4>
-                            <p class="extra-information__subtitle">Total Deposit Amount</p>
-                            <span class="extra-information__amount withdrawal">16,247 TRX</span>
-                        </section>
-                    </div>
+          <div class="total-payment__extra-informatin__container">
+            <div class="total-payments">
+              <section class="total-payment__container">
+                <img
+                  src="/public/images/icon/dashboard/Total_Leg_Payment.svg"
+                  alt="total-payment__img"
+                  class="total-payment__img"
+                />
+                <div class="total-payment__info">
+                  <p class="total-payment__title">Total Leg 1 Payment</p>
+                  <span class="total-payment__subtitle">10,209,000 TRX</span>
                 </div>
-                <section class="statistics-tables">
-                    <div class="statistics-table__container lg:w-full">
-                        <div class="statistics-table__header">
-                            <h4 class="statistics-table__title">Referral Profits</h4>
-                            <p class="statistics-table__subtitle">(Last 20 items)</p>
-                        </div>
-                        <div class="table">
-                            <div class="table__header grid-cols-3">
-                                <h4 class="table-header__title">Date</h4>
-                                <h4 class="table-header__title">Profit (TRX)</h4>
-                                <h4 class="table-header__title">Flashout (TRX)</h4>
-                            </div>
-                            <div class="table__body">
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                    <span class="text-withdrawal-amount table-row__data">25,500 TRX</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="statistics-table__container lg:w-full">
-                        <div class="statistics-table__header">
-                            <h4 class="statistics-table__title">Referral Profits</h4>
-                            <p class="statistics-table__subtitle">(Last 20 items)</p>
-                        </div>
-                        <div class="table">
-                            <div class="table__header grid grid-cols-3">
-                                <h4 class="table-header__title col-span-2">Date</h4>
-                                <h4 class="table-header__title">Profit (TRX)</h4>
-                            </div>
-                            <div class="table__body">
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                                <div class="table__row grid-cols-3">
-                                    <span class="text-normal table-row__data col-span-2">2022-10-02 00:00:02</span>
-                                    <span class="text-invite-link table-row__data">125 TRX</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+              </section>
+              <section class="total-payment__container">
+                <img
+                  src="/public/images/icon/dashboard/Total_Leg_Payment.svg"
+                  alt="total-payment__img"
+                  class="total-payment__img"
+                />
+                <div class="total-payment__info">
+                  <p class="total-payment__title">Total Leg 1 Payment</p>
+                  <span class="total-payment__subtitle">10,209,000 TRX</span>
+                </div>
+              </section>
             </div>
-        </section>
+            <div class="extra-informations">
+              <section class="extra-information__container">
+                <img
+                  src="/public/images/icon/dashboard/Wallet.svg"
+                  alt="wallet-img"
+                  class="extra-information__img"
+                />
+                <h4 class="extra-information__title">Wallet</h4>
+                <p class="extra-information__subtitle">Total Referral Profit</p>
+                <span class="extra-information__amount wallet">
+                  16,247 TRX
+                </span>
+              </section>
+              <section class="extra-information__container">
+                <img
+                  src="/public/images/icon/dashboard/Profit.svg"
+                  alt="profit-img"
+                  class="extra-information__img"
+                />
+                <h4 class="extra-information__title">Profit</h4>
+                <p class="extra-information__subtitle">Last Day Profit</p>
+                <span class="extra-information__amount profit">16,247 TRX</span>
+              </section>
+              <section class="extra-information__container">
+                <img
+                  src="/public/images/icon/dashboard/Deposits.svg"
+                  alt="deposit-img"
+                  class="extra-information__img"
+                />
+                <h4 class="extra-information__title">Deposits</h4>
+                <p class="extra-information__subtitle">Total Deposit Amount</p>
+                <span class="extra-information__amount deposit"
+                  >16,247 TRX</span
+                >
+              </section>
+              <section class="extra-information__container">
+                <img
+                  src="/public/images/icon/dashboard/Withdrawals.svg"
+                  alt="deposit-img"
+                  class="extra-information__img"
+                />
+                <h4 class="extra-information__title">Withdrawals</h4>
+                <p class="extra-information__subtitle">Total Deposit Amount</p>
+                <span class="extra-information__amount withdrawal"
+                  >16,247 TRX</span
+                >
+              </section>
+            </div>
+          </div>
+          <section class="statistics-tables">
+            <div class="statistics-table__container lg:w-full">
+              <div class="statistics-table__header">
+                <h4 class="statistics-table__title">Referral Profits</h4>
+                <p class="statistics-table__subtitle">(Last 20 items)</p>
+              </div>
+              <div class="table">
+                <div class="table__header grid-cols-3">
+                  <h4 class="table-header__title">Date</h4>
+                  <h4 class="table-header__title">Profit (TRX)</h4>
+                  <h4 class="table-header__title">Flashout (TRX)</h4>
+                </div>
+                <div class="table__body">
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                    <span class="text-withdrawal-amount table-row__data"
+                      >25,500 TRX</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="statistics-table__container lg:w-full">
+              <div class="statistics-table__header">
+                <h4 class="statistics-table__title">Referral Profits</h4>
+                <p class="statistics-table__subtitle">(Last 20 items)</p>
+              </div>
+              <div class="table">
+                <div class="table__header grid grid-cols-3">
+                  <h4 class="table-header__title col-span-2">Date</h4>
+                  <h4 class="table-header__title">Profit (TRX)</h4>
+                </div>
+                <div class="table__body">
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                  <div class="table__row grid-cols-3">
+                    <span class="text-normal table-row__data col-span-2"
+                      >2022-10-02 00:00:02</span
+                    >
+                    <span class="text-invite-link table-row__data"
+                      >125 TRX</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>

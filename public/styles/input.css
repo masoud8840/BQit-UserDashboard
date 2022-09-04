@@ -28,7 +28,7 @@
   }
 
   .container {
-    @apply mx-auto flex gap-5 py-5 xl:gap-[35px] max-w-7xl
+    @apply mx-auto flex gap-5 py-5 xl:gap-[35px] max-w-7xl items-start
   }
   .navigation__container {
     @apply bg-white h-fit rounded-25px py-30px px-10px md:w-[290px]
@@ -50,7 +50,7 @@
     @apply rounded-15px flex flex-col md:flex-row md:gap-3 items-center p-2
   }
   .navigation__img {
-    @apply w-6
+    @apply w-6 min-w-[24px]
   }
   .navigation__text {
     @apply hidden md:block text-base 
@@ -184,6 +184,22 @@
   .tree-diagram__tree ul:not(ul:first-child) {
     @apply pl-10
   }
+
+  /* Badges */
+  .badge {
+    @apply bg-[#34BFA3] text-white py-[3px] px-2 w-fit text-center rounded-[3px]
+  }
+
+
+
+
+
+  .table__btn {
+    @apply h-16 text-normal
+  }
+  .table-btn__active {
+    @apply border-b-2 border-b-[#FF9900] text-[#ff9900]
+  }
 }
 
 
@@ -193,4 +209,25 @@
 }
 .navigation__link {
   color: #6F727D;
+}
+
+.deposit-requests__table .table__header {
+  display: grid;
+  grid-template-columns: 0.1fr 0.3fr 0.3fr 0.2fr 1.3fr 0.8fr 0.3fr 0.4fr 0.4fr;
+  gap: 10px;
+}
+
+.deposit-requests__table .table__body .table__row {
+  grid-template-columns: 0.1fr 0.3fr 0.3fr 0.2fr 1.3fr 0.8fr 0.3fr 0.4fr 0.4fr;
+  gap: 10px;
+}
+
+.deposit-requests__table .table__body .table__row div input[type='checkbox']:checked {
+  background-image: url('/public/images/icon/deposit_requests/Check.svg');
+  background-position: center;
+}
+
+input.table-header__title:checked {
+  background-image: url('/public/images/icon/deposit_requests/Check.svg');
+  background-position: center;
 }
