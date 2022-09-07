@@ -803,9 +803,7 @@ video {
 .profile-showcase__inner {
   margin: auto;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 75%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -916,6 +914,9 @@ video {
   padding: 10px;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .total-payment__container:hover {
@@ -1307,6 +1308,16 @@ video {
   margin-right: 0.25rem;
 }
 
+.my-\[10px\] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-10px {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1333,6 +1344,18 @@ video {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.ml-10px {
+  margin-left: 10px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -1365,6 +1388,12 @@ video {
 
 .h-9 {
   height: 2.25rem;
+}
+
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .min-h-\[85px\] {
@@ -1403,6 +1432,10 @@ video {
   width: 7rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1427,6 +1460,22 @@ video {
 
 .min-w-\[1100px\] {
   min-width: 1100px;
+}
+
+.min-w-\[400px\] {
+  min-width: 400px;
+}
+
+.min-w-\[300px\] {
+  min-width: 300px;
+}
+
+.min-w-\[280px\] {
+  min-width: 280px;
+}
+
+.min-w-\[270px\] {
+  min-width: 270px;
 }
 
 .max-w-\[300px\] {
@@ -1455,12 +1504,20 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-start {
@@ -1653,6 +1710,11 @@ video {
   background-color: rgb(244 81 108 / var(--tw-bg-opacity));
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .p-10px {
   padding: 10px;
 }
@@ -1708,6 +1770,11 @@ video {
   padding-bottom: 0px;
 }
 
+.px-10px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1733,6 +1800,22 @@ video {
   padding-right: 0.75rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1745,6 +1828,10 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-\[23px\] {
+  font-size: 23px;
 }
 
 .font-light {
@@ -1949,18 +2036,13 @@ input::placeholder {
 @media (min-width: 1024px) {
   .gallery-management .table__header {
     display: grid;
-    grid-template-columns: 0.15fr 0.20fr 0.3fr 1fr 0.4fr;
+    grid-template-columns: 0.15fr 0.2fr 0.3fr 1fr 0.4fr;
   }
 
   .gallery-management .table__row {
     display: grid;
     grid-template-columns: 0.15fr 0.2fr 0.3fr 1fr 0.4fr;
   }
-}
-
-/* extras */
-
-.new-withdraw-request::-webkit-scrollbar {
 }
 
 .checked\:bg-invite-link:checked {
@@ -2006,6 +2088,10 @@ input::placeholder {
 }
 
 @media (min-width: 1024px) {
+  .lg\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -2026,6 +2112,12 @@ input::placeholder {
     gap: 1.25rem;
   }
 
+  .lg\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:border-l-\[1px\] {
     border-left-width: 1px;
   }
@@ -2036,6 +2128,11 @@ input::placeholder {
 
   .lg\:p-5 {
     padding: 1.25rem;
+  }
+
+  .lg\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .lg\:pl-5 {
@@ -2050,5 +2147,12 @@ input::placeholder {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }

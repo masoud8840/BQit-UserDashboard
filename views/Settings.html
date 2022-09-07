@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--  Linking style file  -->
+  <link rel="stylesheet" href="/public/styles/style.css" />
+  <!-- Linking script file -->
+  <script src="/public/scripts/script.js" defer></script>
+  <link rel="shortcut icon" href="/public/images/Logo.svg">
+  <title>BQit | Settings</title>
+</head>
+
+<body class="bg-[#fafafe]">
+  <div class="container relative">
+    <nav class="navigation__container">
+      <div class="logo__container">
+        <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
+      </div>
+      <ul class="navigation__inner">
+        <li class="navigation__list">
+          <a href="./index.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img" class="navigation__img" />
+            <span class="navigation__text">Dashboard</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="#joineology" class="navigation__link">
+            <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
+            <span class="navigation__text">Jineology</span>
+          </a>
+        </li>
+        <li class="navigation__list md:w-full">
+          <a href="./TreeDiagram.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img" class="navigation__img" />
+            <span class="navigation__text">Tree Diagram</span>
+          </a>
+        </li>
+        <li class="navigation__list md:w-full">
+          <a href="./DepositRequests.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
+              class="navigation__img" />
+            <span class="navigation__text">Deposit Requests</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./UserManagement.html" class="navigation__link">
+            <img src="/public/images/icon/menu/User_Management.svg" alt="user-management-img" class="navigation__img" />
+            <span class="navigation__text">User Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./WithdrawRequests.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
+              class="navigation__img" />
+            <span class="navigation__text">Withdraw Requests</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./GalleryManagements.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
+              class="navigation__img" />
+            <span class="navigation__text">Gallery Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./AdminManagement.html" class="navigation__link active">
+            <img src="/public/images/icon/menu/Admin_Management_Active.svg" alt="admin-management-img"
+              class="navigation__img" />
+            <span class="navigation__text">Admin Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./Reports.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Reports.svg" alt="reports-img" class="navigation__img" />
+            <span class="navigation__text">Reports</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="#logout" class="navigation__link mt-20">
+            <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
+            <span class="navigation__text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="settings w-full flex flex-col gap-5">
+      <div class="withdraw-requests__header">
+        <a href="./Settings.html" class="btn__settings">
+          <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
+        </a>
+        <div class="profile__badge">
+          <img src="/public/images/Profile.svg" alt="profile-img" class="user__img" />
+          <div class="profile-badge__text ml-2">
+            <p class="user__name text-normal">Hesam Safari</p>
+            <span class="user__role">Admin</span>
+          </div>
+          <a href="#arrow" class="arrow__btn">
+            <img src="/public/images/icon/dashboard/Arrow_Down.svg" alt="arrow-img" class="w-5 mb-auto" />
+          </a>
+        </div>
+      </div>
+      <div class="settings__body flex flex-col lg:flex-row gap-[10px]">
+        <section class="profile-showcase__container min-w-[270px]">
+          <div class="profile-showcase__inner">
+            <img src="/public/images/Profile.svg" alt="user-img" class="user__img w-28" />
+            <h4 class="user__name">Hesam Safari</h4>
+            <p class="user__email">hesamsafari@gmail.com</p>
+            <div class="user__password flex">
+              <button class="password-toggler">
+                <img src="/public/images/icon/dashboard/Eye.svg" alt="eye-img" />
+              </button>
+              <div class="user__password-character">
+                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+                <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+              </div>
+            </div>
+            <div class="user__deposit flex border-t-[1px] w-full pt-4 pb-2  items-baseline gap-1">
+              <p class="text-[15px] text-normal">Deposit:</p>
+              <span class="text-normal text-xs font-light">1000 TRX</span>
+            </div>
+            <div class="user__wallet flex border-t-[1px] w-full pt-4 items-baseline gap-1">
+              <p class="text-[15px] text-normal">Wallet:</p>
+              <span class="text-normal text-xs font-light">1000 TRX</span>
+            </div>
+          </div>
+          <a href="#invite_link" class="btn__primary">Invite Link</a>
+        </section>
+        <div class="statistics-table__subheader bg-white rounded-25px w-full">
+          <ul class="flex gap-[15px] border-b-[#393939]/10 border-b-[1px] px-10px lg:px-5">
+            <li>
+              <button class="table__btn text-sm xl:text-lg table-btn__active"
+                onclick="toggleDepositRequestsTabs('update profile', this)">Update Profile</button>
+            </li>
+            <li>
+              <button class="table__btn text-sm xl:text-lg"
+                onclick="toggleDepositRequestsTabs('change password', this)">Change Password</button>
+            </li>
+            <li>
+              <button class="table__btn text-sm xl:text-lg"
+                onclick="toggleDepositRequestsTabs('show ancestors', this)">Show Ancestors</button>
+            </li>
+            <li>
+              <button class="table__btn text-sm xl:text-lg"
+                onclick="toggleDepositRequestsTabs('charge deposit', this)">Charge Deposit</button>
+            </li>
+          </ul>
+          <div class="settings__update-profile">
+            <h4 class="text-[23px] text-normal h-fit mt-5 mb-10px ml-10px lg:ml-5">Personal Details</h4>
+            <div class="p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
+              <div class="input-group gap-1 max-w-[300px] flex flex-col">
+                <label for="name" class="text-normal text-xs font-light">Full Name:</label>
+                <input type="text" id="name"
+                  class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+              </div>
+              <div class="input-group gap-1 max-w-[300px] flex flex-col">
+                <label for="email" class="text-normal text-xs font-light">Email:</label>
+                <input type="email" id="email"
+                  class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+              </div>
+              <div class="input-group gap-1 max-w-[300px] flex flex-col">
+                <label for="walletAddress" class="text-normal text-xs font-light">Wallet Address:</label>
+                <input type="text" id="walletAddress"
+                  class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+              </div>
+              <div class="input-group gap-1 flex flex-col">
+                <button class="search__btn bg-search-btn w-24 py-1 rounded-[3px] text-white text-xs font-light">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hidden settings__change-password p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
+            <div class="input-group gap-1 max-w-[300px] flex flex-col">
+              <label for="current-password" class="text-normal text-xs font-light">Current Password:</label>
+              <input type="password" id="current-password"
+                class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+            </div>
+            <div class="input-group gap-1 max-w-[300px] flex flex-col">
+              <label for="new-password" class="text-normal text-xs font-light">New Password:</label>
+              <input type="password" id="new-password"
+                class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+            </div>
+            <div class="input-group gap-1 max-w-[300px] flex flex-col">
+              <label for="confirm-password" class="text-normal text-xs font-light">Confirm Password:</label>
+              <input type="password" id="confirm-password"
+                class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+            </div>
+            <div class="input-group gap-1 flex flex-col">
+              <button class="search__btn bg-search-btn w-24 py-1 rounded-[3px] text-white text-xs font-light">
+                Save Changes
+              </button>
+            </div>
+          </div>
+          <div class="hidden settings__show-ancestors card card__hover py-5 min-h-[200px]">
+            <ul class="w-fit space-y-[5px] lg:space-y-5">
+              <li
+                class="text-white bg-invite-link text-xs rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+                <img src="/public/images/icon/tree_diagram/User_White.svg" alt="user-img" class="user__icon mx-1">
+                <p class="text-sm lg:text-base">Admin - Code: 15202 - TRX</p>
+              </li>
+              <li
+                class="text-white bg-invite-link text-xs rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+                <img src="/public/images/icon/tree_diagram/User_White.svg" alt="user-img" class="user__icon mx-1">
+                <p class="text-sm lg:text-base">Hesam - Code: 15202 - TRX</p>
+              </li>
+              <li
+                class="text-white bg-invite-link text-xs rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+                <img src="/public/images/icon/tree_diagram/User_White.svg" alt="user-img" class="user__icon mx-1">
+                <p class="text-sm lg:text-base">Sina - Code: 15202 - TRX</p>
+              </li>
+              <li
+                class="text-white bg-invite-link text-xs rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+                <img src="/public/images/icon/tree_diagram/User_White.svg" alt="user-img" class="user__icon mx-1">
+                <p class="text-sm lg:text-base">Sobhan - Code: 15202 - TRX</p>
+              </li>
+              <li
+                class="text-white bg-invite-link text-xs rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+                <img src="/public/images/icon/tree_diagram/User_White.svg" alt="user-img" class="user__icon mx-1">
+                <p class="text-sm lg:text-base">Admin - Code: 15202 - TRX</p>
+              </li>
+            </ul>
+          </div>
+          <div class="settings__charge-deposit hidden">
+            <h4 class="settings__title text-[23px] text-normal h-fit mt-5 mb-10px ml-10px lg:ml-5">Charge Amount</h4>
+            <div class="p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
+              <div class="input-group gap-1 max-w-[300px] flex flex-col">
+                <label for="charge-amount" class="text-normal text-xs font-light">Amount:</label>
+                <input type="number" id="charge-amount"
+                  class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light" />
+              </div>
+              <div class="input-group gap-1 flex flex-col">
+                <button class="search__btn bg-search-btn w-24 py-1 rounded-[3px] text-white text-xs font-light">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
