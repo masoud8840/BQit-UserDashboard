@@ -17,8 +17,8 @@ const toggleDepositRequestsTabs = (clickedTab, htmlEl) => {
             activeUsersTable.style.display = 'flex';
             pendingUsersTable.style.display = 'none';
         }
-        if(window.location.pathname === '/views/DepositRequests.html')
-        historyRequestsTable.style.display = 'none'
+        if (window.location.pathname === '/views/DepositRequests.html')
+            historyRequestsTable.style.display = 'none'
         activeUsersTable.style.display = 'flex';
         currentTab = 'active users'
     }
@@ -39,6 +39,7 @@ const selectAllTableRows = (input) => {
     const activeUsersTableInputs = document.querySelectorAll('.active-users__table .table__row input');
     const historyRequestsTableInputs = document.querySelectorAll('.history-requests__table .table__row input')
     const pendingUsersTableInputs = document.querySelectorAll('.pending-users__table .table__row input')
+    const withdrawRequestTableInputs = document.querySelectorAll('.withdraw-requests__table .table__row input');
     if (input.checked) {
         if (currentTab === 'active users') {
             activeUsersTableInputs.forEach(input => {
@@ -54,6 +55,12 @@ const selectAllTableRows = (input) => {
             pendingUsersTableInputs.forEach(input => {
                 input.checked = true
             })
+        }
+        if (window.location.pathname === '/views/WithdrawRequests.html') {
+            withdrawRequestTableInputs.forEach(input => {
+                input.checked = true;
+            })
+            console.log("inputs checked")
         }
     } else {
         if (currentTab === 'active users') {
@@ -71,7 +78,13 @@ const selectAllTableRows = (input) => {
                 input.checked = false
             })
         }
+        if (window.location.pathname === '/views/WithdrawRequests.html') {
+            withdrawRequestTableInputs.forEach(input => {
+                input.checked = false
+            })
+        }
     }
+
 }
 
 
@@ -91,4 +104,12 @@ const togglePopup = (type) => {
         approvedPopUp.style.display = 'none'
         deletedPopUp.style.display = 'none'
     }, 2000)
+}
+
+
+
+const switchBetween2Tab = (elShouldHide, shouldVisible, toggleVisibleBtn) => {
+    const shouldHide = elShouldHide;
+    elShouldHide.style.display = 'none';
+
 }

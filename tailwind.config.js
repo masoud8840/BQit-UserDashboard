@@ -23,13 +23,24 @@ module.exports = {
                 'withdrawal-amount': '#F4516C',
                 'light': '#fafafa',
                 'profot-amount': '#34BFA3',
-                'search-btn': '#34BFA3'
+                'search-btn': '#34BFA3',
+                'deposit-amount': '#B9B9B9',
+                'badge__dark': '#B9B9B9',
+                'badge__green': '#34BFA3',
+                'badge__purple': '#5867DD',
+                'badge__red': '#F4516C',
             },
             backgroundColor: {
                 "navigation__active": "#ff9900",
                 "invite-link": "#5867DD",
                 'profit-amount': '#34BFA3',
-                'search-btn': '#34BFA3'
+                'search-btn': '#34BFA3',
+                'withdrawal-amount': '#F4516C',
+                'badge__dark': '#B9B9B9',
+                'badge__green': '#34BFA3',
+                'badge__purple': '#5867DD',
+                'badge__red': '#F4516C',
+                'badge__warning': '#FFC241',
                 // 'withdrawal-amount': '#F4516C'
             },
         },
