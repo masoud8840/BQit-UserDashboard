@@ -29,6 +29,7 @@ module.exports = {
                 'badge__green': '#34BFA3',
                 'badge__purple': '#5867DD',
                 'badge__red': '#F4516C',
+                'lightgray': '#858585',
             },
             backgroundColor: {
                 "navigation__active": "#ff9900",
@@ -41,6 +42,7 @@ module.exports = {
                 'badge__purple': '#5867DD',
                 'badge__red': '#F4516C',
                 'badge__warning': '#FFC241',
+                'lightgray': '#858585',
                 // 'withdrawal-amount': '#F4516C'
             },
         },

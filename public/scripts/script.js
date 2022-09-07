@@ -40,6 +40,7 @@ const selectAllTableRows = (input) => {
     const historyRequestsTableInputs = document.querySelectorAll('.history-requests__table .table__row input')
     const pendingUsersTableInputs = document.querySelectorAll('.pending-users__table .table__row input')
     const withdrawRequestTableInputs = document.querySelectorAll('.withdraw-requests__table .table__row input');
+    const galleryManagementTableInput = document.querySelectorAll('.gallery-management .table__row input');
     if (input.checked) {
         if (currentTab === 'active users') {
             activeUsersTableInputs.forEach(input => {
@@ -60,7 +61,12 @@ const selectAllTableRows = (input) => {
             withdrawRequestTableInputs.forEach(input => {
                 input.checked = true;
             })
-            console.log("inputs checked")
+        }
+
+        if (window.location.pathname === '/views/GalleryManagements.html') {
+            galleryManagementTableInput.forEach(input => {
+                input.checked = true;
+            })
         }
     } else {
         if (currentTab === 'active users') {
@@ -81,6 +87,12 @@ const selectAllTableRows = (input) => {
         if (window.location.pathname === '/views/WithdrawRequests.html') {
             withdrawRequestTableInputs.forEach(input => {
                 input.checked = false
+            })
+        }
+        
+        if (window.location.pathname === '/views/GalleryManagements.html') {
+            galleryManagementTableInput.forEach(input => {
+                input.checked = false;
             })
         }
     }

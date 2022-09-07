@@ -200,6 +200,9 @@
   .table-btn__active {
     @apply border-b-2 border-b-[#FF9900] text-[#ff9900];
   }
+  .input::placeholder {
+    @apply text-lightgray text-xs font-light;
+  }
 }
 
 .navigation__link.active {
@@ -268,4 +271,17 @@ input.table-header__title:checked {
 .withdraw-requests__table .table__row {
   display: grid;
   grid-template-columns: 0.2fr 0.3fr 0.3fr 0.8fr 0.3fr 0.35fr 0.4fr 0.55fr;
+}
+.gallery-management .table__header {
+  display: grid;
+  grid-template-columns: 0.25fr 0.3fr 0.4fr 1fr 0.4fr;
+}
+.gallery-management .table__row {
+  display: grid;
+  grid-template-columns: 0.25fr 0.3fr 0.4fr 1fr 0.4fr;
+}
+
+.new-gallery-image__file::-webkit-file-upload-button {
+  display: none;
+  appearance: none;
 }
