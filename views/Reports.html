@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--  Linking style file  -->
+  <link rel="stylesheet" href="/public/styles/style.css" />
+  <!-- Linking script file -->
+  <script src="/public/scripts/script.js" defer></script>
+  <link rel="shortcut icon" href="/public/images/Logo.svg">
+  <title>BQit | Reports</title>
+</head>
+
+<body class="bg-[#fafafe]">
+  <div class="container relative">
+    <nav class="navigation__container">
+      <div class="logo__container">
+        <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
+      </div>
+      <ul class="navigation__inner">
+        <li class="navigation__list">
+          <a href="./index.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Dashboard.svg"
+              alt="dashboard-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Dashboard</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="#joineology" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Jineology.svg"
+              alt="jineology-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Jineology</span>
+          </a>
+        </li>
+        <li class="navigation__list md:w-full">
+          <a href="./TreeDiagram.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Tree_Diagram.svg"
+              alt="tree-diagram-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Tree Diagram</span>
+          </a>
+        </li>
+        <li class="navigation__list md:w-full">
+          <a href="./DepositRequests.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Deposite_Requests.svg"
+              alt="deposit-request-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Deposit Requests</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./UserManagement.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/User_Management.svg"
+              alt="user-management-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">User Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./WithdrawRequests.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Withdraw_Request.svg"
+              alt="withdraw-requests-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Withdraw Requests</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./GalleryManagements.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Gallery_Management.svg"
+              alt="gallery-management-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Gallery Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./AdminManagement.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Admin_Management.svg"
+              alt="admin-management-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Admin Management</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="./Reports.html" class="navigation__link active">
+            <img
+              src="/public/images/icon/menu/Reports_Active.svg"
+              alt="reports-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Reports</span>
+          </a>
+        </li>
+        <li class="navigation__list">
+          <a href="#logout" class="navigation__link mt-20">
+            <img
+              src="/public/images/icon/menu/Logout.svg"
+              alt="logout-img"
+              class="navigation__img"
+            />
+            <span class="navigation__text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="reports flex flex-col gap-5">
+      <div class="withdraw-requests__header">
+        <button class="btn__settings">
+          <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
+        </button>
+        <div class="profile__badge">
+          <img src="/public/images/Profile.svg" alt="profile-img" class="user__img" />
+          <div class="profile-badge__text ml-2">
+            <p class="user__name text-normal">Hesam Safari</p>
+            <span class="user__role">Admin</span>
+          </div>
+          <a href="#arrow" class="arrow__btn">
+            <img src="/public/images/icon/dashboard/Arrow_Down.svg" alt="arrow-img" class="w-5 mb-auto" />
+          </a>
+        </div>
+      </div>
+      <div class="statistics-table__container overflow-auto lg:w-full">
+        <div class="statistics-table__header py-0 items-center justify-between">
+          <h4 class="statistics-table__title">Profit Reports</h4>
+          <ul class="flex gap-[15px]">
+            <li>
+              <button class="table__btn text-sm lg:text-lg table-btn__active"
+                onclick="toggleDepositRequestsTabs('active users', this)">Referral Profit</button>
+            </li>
+            <li>
+              <button class="table__btn text-sm lg:text-lg"
+                onclick="toggleDepositRequestsTabs('pending users', this)">Deposit Profits</button>
+            </li>
+          </ul>
+        </div>
+        <div class="statistics-table__subheader search__subheader grid grid-cols-1 lg:grid-cols-4 gap-[10px] p-10px">
+          <div class="input-group gap-1 max-w-[300px] flex flex-col">
+            <label for="userID" class="text-normal font-light">User ID:</label>
+            <input type="text" id="userID" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+              placeholder="Enter User ID...">
+          </div>
+          <div class="input-group gap-1 max-w-[300px] flex flex-col">
+            <label for="email" class="text-normal font-light">Email:</label>
+            <input type="emai" id="email" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+              placeholder="Enter user email...">
+          </div>
+          <div class="input-group gap-1 max-w-[300px] flex flex-col">
+            <label for="referenceCode" class="text-normal font-light">Reference Code:</label>
+            <input type="text" id="referenceCode"
+              class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+              placeholder="Enter Reference Code...">
+          </div>
+          <div class="input-group gap-1 max-w-[300px] flex flex-col">
+            <label for="date" class="text-normal font-light">Reference Code:</label>
+            <input type="date" id="date" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
+              placeholder="2022-06-01">
+          </div>
+          <div class="input-group gap-1 max-w-[300px] flex flex-col">
+            <button
+              class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">Search</button>
+          </div>
+        </div>
+        <div class="referral-profit__table overflow-auto">
+          <div class="table user-management__table w-full p-5 pt-10px min-w-[1000px]">
+            <div class="table__header">
+              <div>
+                <h4 class="table-header__title">User ID</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Name</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Username</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Email</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Reference Code</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Profit(TRX)</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Flashout(TRX)</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Date</h4>
+              </div>
+            </div>
+            <div class="table__body">
+              <div class="table__row hover:bg-[#716aca]/[6%] items-center">
+                <span class="text-normal table-row__data">1925</span>
+                <span class="text-normal table-row__data">Hesam</span>
+                <span class="text-normal table-row__data">0945464864853@gmail.com</span>
+                <span class="text-normal table-row__data">hesam09606864@gmail.com</span>
+                <span class="text-normal table-row__data">g9526Rwasd6</span>
+                <span class="text-invite-link table-row__data">110 TRX</span>
+                <span class="text-withdrawal-amount table-row__data">0 TRX</span>
+                <span class="table-row__data">2022-08-02 08:15:14</span>
+              </div>
+              <div class="table__row hover:bg-[#716aca]/[6%] items-center">
+                <span class="text-normal table-row__data">1925</span>
+                <span class="text-normal table-row__data">Hesam</span>
+                <span class="text-normal table-row__data">0945464864853@gmail.com</span>
+                <span class="text-normal table-row__data">hesam09606864@gmail.com</span>
+                <span class="text-normal table-row__data">g9526Rwasd6</span>
+                <span class="text-invite-link table-row__data">110 TRX</span>
+                <span class="text-withdrawal-amount table-row__data">0 TRX</span>
+                <span class="table-row__data">2022-08-02 08:15:14</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deposit Profit -->
+        <div class="deposit-profit__table overflow-auto hidden">
+          <div class="table user-management__table w-full p-5 pt-10px min-w-[1000px]">
+            <div class="table__header">
+              <div>
+                <h4 class="table-header__title">User ID</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Name</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Username</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Email</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Reference Code</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Profit(TRX)</h4>
+              </div>
+              <div>
+                <h4 class="table-header__title">Date</h4>
+              </div>
+            </div>
+            <div class="table__body">
+              <div class="table__row hover:bg-[#716aca]/[6%] items-center">
+                <span class="text-normal table-row__data">1925</span>
+                <span class="text-normal table-row__data">Hesam</span>
+                <span class="text-normal table-row__data">0945464864853@gmail.com</span>
+                <span class="text-normal table-row__data">hesam09606864@gmail.com</span>
+                <span class="text-normal table-row__data">g9526Rwasd6</span>
+                <span class="text-invite-link table-row__data">110 TRX</span>
+                <span class="table-row__data">2022-08-02 08:15:14</span>
+              </div>
+              <div class="table__row hover:bg-[#716aca]/[6%] items-center">
+                <span class="text-normal table-row__data">1925</span>
+                <span class="text-normal table-row__data">Hesam</span>
+                <span class="text-normal table-row__data">0945464864853@gmail.com</span>
+                <span class="text-normal table-row__data">hesam09606864@gmail.com</span>
+                <span class="text-normal table-row__data">g9526Rwasd6</span>
+                <span class="text-invite-link table-row__data">110 TRX</span>
+                <span class="table-row__data">2022-08-02 08:15:14</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  </div>
+  <div
+    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
+    <div class="border-r-green-400 border-r-4 pr-3">
+      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
+    </div>
+  </div>
+  <div
+    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
+    <div class="border-r-red-400 border-r-4 pr-3">
+      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

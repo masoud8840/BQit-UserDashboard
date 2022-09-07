@@ -5,84 +5,118 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--  Linking style file  -->
-  <link rel="stylesheet" href="/public/styles/style.css" />
-  <!-- Vue.js CDN -->
-  <!-- <script src="https://unpkg.com/vue@3"></script> -->
-  <!-- Linking script file -->
-  <script src="/public/scripts/script.js" defer></script>
-  <title>qbit | User Management</title>
+    <!--  Linking style file  -->
+    <link rel="stylesheet" href="/public/styles/style.css" />
+    <!-- Linking script file -->
+    <script src="/public/scripts/script.js" defer></script>
+    <link rel="shortcut icon" href="/public/images/Logo.svg">
+  <title>BQit | User Management</title>
 </head>
 
 <body class="bg-[#fafafe]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
-        <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img mx-auto" />
+        <img src="/public/images/Logo.svg" alt="logo-img" class="logo__img" />
       </div>
       <ul class="navigation__inner">
         <li class="navigation__list">
           <a href="./index.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img" class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/Dashboard.svg"
+              alt="dashboard-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Dashboard</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="./TreeDiagram.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
+          <a href="#joineology" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Jineology.svg"
+              alt="jineology-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Jineology</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./TreeDiagram.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img" class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/Tree_Diagram.svg"
+              alt="tree-diagram-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Tree Diagram</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./DepositRequests.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
-              class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/Deposite_Requests.svg"
+              alt="deposit-request-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Deposit Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./UserManagement.html" class="navigation__link active">
-            <img src="/public/images/icon/menu/User_Management_Active.svg" alt="user-management-img"
-              class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/User_Management_Active.svg"
+              alt="user-management-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">User Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./WithdrawRequests.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
-              class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/Withdraw_Request.svg"
+              alt="withdraw-requests-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Withdraw Requests</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="#gallery-management" class="navigation__link">
-            <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
-              class="navigation__img" />
+          <a href="./GalleryManagements.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Gallery_Management.svg"
+              alt="gallery-management-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Gallery Management</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="#admin-management" class="navigation__link">
-            <img src="/public/images/icon/menu/Admin_Management.svg" alt="admin-management-img"
-              class="navigation__img" />
+          <a href="./AdminManagement.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Admin_Management.svg"
+              alt="admin-management-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Admin Management</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="#reports" class="navigation__link">
-            <img src="/public/images/icon/menu/Reports.svg" alt="reports-img" class="navigation__img" />
+          <a href="./Reports.html" class="navigation__link">
+            <img
+              src="/public/images/icon/menu/Reports.svg"
+              alt="reports-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Reports</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#logout" class="navigation__link mt-20">
-            <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
+            <img
+              src="/public/images/icon/menu/Logout.svg"
+              alt="logout-img"
+              class="navigation__img"
+            />
             <span class="navigation__text">Logout</span>
           </a>
         </li>
