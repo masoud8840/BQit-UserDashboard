@@ -22,101 +22,65 @@
       <ul class="navigation__inner">
         <li class="navigation__list">
           <a href="./index.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Dashboard.svg"
-              alt="dashboard-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img" class="navigation__img" />
             <span class="navigation__text">Dashboard</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#joineology" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Jineology.svg"
-              alt="jineology-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
             <span class="navigation__text">Jineology</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./TreeDiagram.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Tree_Diagram.svg"
-              alt="tree-diagram-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img" class="navigation__img" />
             <span class="navigation__text">Tree Diagram</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./DepositRequests.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Deposite_Requests.svg"
-              alt="deposit-request-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
+              class="navigation__img" />
             <span class="navigation__text">Deposit Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./UserManagement.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/User_Management.svg"
-              alt="user-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/User_Management.svg" alt="user-management-img" class="navigation__img" />
             <span class="navigation__text">User Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./WithdrawRequests.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Withdraw_Request.svg"
-              alt="withdraw-requests-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
+              class="navigation__img" />
             <span class="navigation__text">Withdraw Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./GalleryManagements.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Gallery_Management.svg"
-              alt="gallery-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
+              class="navigation__img" />
             <span class="navigation__text">Gallery Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./AdminManagement.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Admin_Management.svg"
-              alt="admin-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Admin_Management.svg" alt="admin-management-img"
+              class="navigation__img" />
             <span class="navigation__text">Admin Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./Reports.html" class="navigation__link active">
-            <img
-              src="/public/images/icon/menu/Reports_Active.svg"
-              alt="reports-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Reports_Active.svg" alt="reports-img" class="navigation__img" />
             <span class="navigation__text">Reports</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#logout" class="navigation__link mt-20">
-            <img
-              src="/public/images/icon/menu/Logout.svg"
-              alt="logout-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
             <span class="navigation__text">Logout</span>
           </a>
         </li>
@@ -141,14 +105,24 @@
       <div class="statistics-table__container overflow-auto lg:w-full">
         <div class="statistics-table__header py-0 items-center justify-between">
           <h4 class="statistics-table__title">Profit Reports</h4>
-          <ul class="flex gap-[15px]">
-            <li>
-              <button class="table__btn text-sm lg:text-lg table-btn__active"
-                onclick="toggleDepositRequestsTabs('active users', this)">Referral Profit</button>
+          <ul class="flex gap-[15px] relative">
+            <li class="group">
+              <button class="table__btn group text-sm group lg:text-lg flex items-center table-btn__active"
+                onclick="toggleDepositRequestsTabs('summary profit', this)">Summary<img
+                  src="/public/images/icon/dashboard/Arrow_Down_Active.svg" alt="arrow-icon" class="pt-1 summary-btn__arrow-down"></button>
+              <!-- <ul class="flex flex-col group-hover:opacity-100 transition-all duration-200 -bottom-28 group-hover:-bottom-[110px] absolute p-2 gap-1 rounded-10px bg-[#fafafd] opacity-0">
+                <li><button class="submenu__item  text-sm lg:text-base hover:bg-navigation__active hover:text-white w-full p-2 rounded-md z-10 submenu__item-active">7 Days Ago</button></li>
+                <li><button class="submenu__item text-sm lg:text-base hover:bg-navigation__active hover:text-white w-full p-2 rounded-md z-10">All Time</button></li>
+                <img src="/public/images/icon/reports/Triangle.svg" alt="Triangle" class=" w-7 h-3 right-1 absolute -top-[6px]">
+              </ul> -->
             </li>
             <li>
               <button class="table__btn text-sm lg:text-lg"
-                onclick="toggleDepositRequestsTabs('pending users', this)">Deposit Profits</button>
+                onclick="toggleDepositRequestsTabs('referral profit', this)">Referral Profit</button>
+            </li>
+            <li>
+              <button class="table__btn text-sm lg:text-lg"
+                onclick="toggleDepositRequestsTabs('deposit profit', this)">Deposit Profits</button>
             </li>
           </ul>
         </div>
@@ -233,7 +207,7 @@
         </div>
 
         <!-- Deposit Profit -->
-        <div class="deposit-profit__table overflow-auto hidden">
+        <div class="deposit-profit__table overflow-auto">
           <div class="table user-management__table w-full p-5 pt-10px min-w-[1000px]">
             <div class="table__header">
               <div>

@@ -234,7 +234,7 @@
   .badge {
     @apply text-white py-[3px] px-2 w-fit text-center rounded-[3px] text-xs font-light;
   }
-
+  
   .badge__green {
     @apply bg-[#34BFA3];
   }
@@ -250,9 +250,12 @@
   .table-btn__active {
     @apply border-b-2 border-b-[#FF9900] text-[#ff9900];
   }
-
+  
   .input::placeholder {
     @apply text-lightgray text-xs font-light;
+  }
+  .submenu__item-active {
+    @apply bg-navigation__active text-white
   }
 }
 
@@ -287,6 +290,11 @@
   div
   input[type="checkbox"]:checked,
 .withdraw-requests__table
+  .table__body
+  .table__row
+  div
+  input[type="checkbox"]:checked,
+.admin-management__table
   .table__body
   .table__row
   div
@@ -386,6 +394,7 @@ input::placeholder {
   font-weight: 300;
 }
 
+
 @media (min-width: 1024px) {
   .gallery-management .table__header {
     display: grid;
@@ -397,3 +406,5 @@ input::placeholder {
     grid-template-columns: 0.15fr 0.2fr 0.3fr 1fr 0.4fr;
   }
 }
+
+

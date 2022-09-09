@@ -105,7 +105,7 @@
       <div class="statistics-table__container overflow-auto lg:w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Gallery Management</h4>
-          <button
+          <button onclick="switchBetween2Element('gallery management')"
             class="new-request__btn bg-invite-link px-3 py-2 gap-[5px] flex items-center text-white text-xs font-light rounded-md">
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
             New
@@ -252,7 +252,7 @@
           </div>
         </div>
       </div>
-      <section class="new-gallery-image card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
+      <section class="new-gallery-image hidden card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Create Image</h4>
         </div>
