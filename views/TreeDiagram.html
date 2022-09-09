@@ -89,9 +89,9 @@
     <!-- Tree Digram Section -->
     <section class="tree-digram w-full flex flex-col gap-5">
       <div class="tree-diagram__header">
-        <button class="btn__settings">
+        <a href="./Settings.html" class="btn__settings">
           <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
-        </button>
+        </a>
         <div class="profile__badge">
           <img src="/public/images/Profile.svg" alt="profile-img" class="user__img" />
           <div class="profile-badge__text ml-2">
@@ -168,8 +168,24 @@
           </div>
         </div>
       </section>
-      <section class="tree-diagram__tree card card__hover py-5 min-h-[200px]">
-        <ul class="w-fit space-y-[5px]">
+      <section class="tree-diagram__tree flex gap-[10px] items-start flex-col card card__hover py-5 min-h-[200px]">
+        <ul class="space-y-[5px] pl-2 inline-block" onclick="toggleTreeOn(this)">
+          <li
+            class="dropdown border-navigation__text border rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+            <img src="/public/images/icon/tree_diagram/Arrow_Right.svg" alt="arrow-img" class="arrow__img">
+            <img src="/public/images/icon/tree_diagram/User_Icon.svg" alt="user-img" class="user__icon mx-1">
+            <p class="text-sm lg:text-base">Admin - Code: 15202 - TRX</p>
+          </li>
+        </ul>
+        <ul class="space-y-[5px] inline-block">
+          <li
+            class="dropdown border-navigation__text border rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
+            <img src="/public/images/icon/tree_diagram/Arrow_Right.svg" alt="arrow-img" class="arrow__img">
+            <img src="/public/images/icon/tree_diagram/User_Icon.svg" alt="user-img" class="user__icon mx-1">
+            <p class="text-sm lg:text-base">Admin - Code: 15202 - TRX</p>
+          </li>
+        </ul>
+        <ul class="space-y-[5px] inline-block">
           <li
             class="dropdown border-navigation__text border rounded-10px flex items-center p-10px hover:bg-[#393939]/5 cursor-pointer">
             <img src="/public/images/icon/tree_diagram/Arrow_Right.svg" alt="arrow-img" class="arrow__img">

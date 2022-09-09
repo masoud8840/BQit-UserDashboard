@@ -9,8 +9,14 @@ const toggleDepositRequestsTabs = (clickedTab, htmlEl) => {
     const referralProfitTable = document.querySelector('.referral-profit__table');
     const depositProfitTable = document.querySelector('.deposit-profit__table');
     const summaryProfitTable = document.querySelector('.summary-profit__table');
-    const summaryBtnArrow = document.querySelector('.summary-btn__arrow-down');
+    // const summaryBtnArrow = document.querySelector('.summary-btn__arrow-down');
     const tableBtns = document.querySelectorAll(".table__btn");
+    const updateProfileSettingTab = document.querySelector('.settings__update-profile');
+    const changePasswordSettingTab = document.querySelector('.settings__change-password');
+    const showAncestorsSettingTab = document.querySelector('.settings__show-ancestors');
+    const chargeDepositSettingTab = document.querySelector('.settings__charge-deposit');
+    const settingsTabArr = [updateProfileSettingTab, changePasswordSettingTab, showAncestorsSettingTab, chargeDepositSettingTab]
+
     tableBtns.forEach(btn => {
         btn.classList.remove('table-btn__active')
     })
@@ -38,21 +44,31 @@ const toggleDepositRequestsTabs = (clickedTab, htmlEl) => {
     }
     if (clickedTab === 'referral profit') {
         depositProfitTable.style.display = 'none'
-        // summaryProfitTable.style.display = 'none';
+        summaryProfitTable.style.display = 'none';
         referralProfitTable.style.display = 'block'
-        summaryBtnArrow.src = '/public/images/icon/dashboard/Arrow_Down.svg'
+        // summaryBtnArrow.src = '/public/images/icon/dashboard/Arrow_Down.svg'
     }
     if (clickedTab === 'deposit profit') {
         depositProfitTable.style.display = 'block'
-        // summaryProfitTable.style.display = 'none';
+        summaryProfitTable.style.display = 'none';
         referralProfitTable.style.display = 'none'
-        summaryBtnArrow.src = '/public/images/icon/dashboard/Arrow_Down.svg'
+        // summaryBtnArrow.src = '/public/images/icon/dashboard/Arrow_Down.svg'
     }
     if (clickedTab === 'summary profit') {
         depositProfitTable.style.display = 'none'
-        // summaryProfitTable.style.display = 'block';
+        summaryProfitTable.style.display = 'flex';
         referralProfitTable.style.display = 'none'
-        htmlEl.childNodes[1].src = '/public/images/icon/dashboard/Arrow_Down_Active.svg'
+        // htmlEl.childNodes[1].src = '/public/images/icon/dashboard/Arrow_Down_Active.svg'
+    }
+    if (window.location.pathname === '/views/Settings.html') {
+        settingsTabArr.forEach(tab => {
+            tab.style.display = 'none'
+        })
+
+        if (clickedTab === 'update profile') updateProfileSettingTab.style.display = 'block'
+        if (clickedTab === 'change password') changePasswordSettingTab.style.display = 'grid'
+        if (clickedTab === 'show ancestors') showAncestorsSettingTab.style.display = 'block'
+        if (clickedTab === 'charge deposit') chargeDepositSettingTab.style.display = 'block'
     }
 }
 
@@ -210,3 +226,39 @@ const switchBetween2Element = (currentRoute) => {
         })
     }
 }
+
+
+const userPassword = '12345';
+let passwordIsVisible = false;
+const togglerBtn = document.querySelector('.password-toggler');
+let passwordField = document.querySelector('.user__password-character');
+togglerBtn.addEventListener("click", () => {
+    if (!passwordIsVisible) {
+        passwordField.innerHTML = `<div class="user__password-character"><p>${userPassword}</p></div>`
+        passwordIsVisible = true;
+    } else {
+        passwordField.innerHTML = `<div class="user__password-character">
+        <img
+        src="/public/images/icon/dashboard/PasswordCharecter.svg"
+        alt="password"
+        />
+        <img
+          src="/public/images/icon/dashboard/PasswordCharecter.svg"
+          alt="password"
+        />
+        <img
+        src="/public/images/icon/dashboard/PasswordCharecter.svg"
+          alt="password"
+          />
+        <img
+        src="/public/images/icon/dashboard/PasswordCharecter.svg"
+        alt="password"
+        />
+        <img
+          src="/public/images/icon/dashboard/PasswordCharecter.svg"
+          alt="password"
+        />
+      </div>`
+        passwordIsVisible = false
+    }
+})

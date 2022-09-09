@@ -99,7 +99,7 @@
   }
 
   .profile-showcase__inner {
-    @apply flex flex-col justify-center items-center space-y-3 pb-5 border-b-[1px] border-b-[#393939]/10 w-3/4 m-auto;
+    @apply flex flex-col justify-center items-center space-y-3 pb-4 border-b-[1px] border-b-[#393939]/10 w-3/4 m-auto;
   }
 
   .user__name {
@@ -257,6 +257,7 @@
   .submenu__item-active {
     @apply bg-navigation__active text-white
   }
+
 }
 
 .navigation__link.active {
@@ -393,6 +394,8 @@ input::placeholder {
   font-size: 12px;
   font-weight: 300;
 }
+
+
 
 
 @media (min-width: 1024px) {
