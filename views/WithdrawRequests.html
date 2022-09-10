@@ -86,7 +86,7 @@
         </li>
       </ul>
     </nav>
-    <section class="withdraw-requests w-full overflow-x-auto flex flex-col gap-5">
+    <section class="withdraw-requests w-full overflow-auto flex flex-col gap-5">
       <div class="withdraw-requests__header">
         <a href="./Settings.html" class="btn__settings">
           <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
@@ -103,8 +103,8 @@
         </div>
       </div>
       <div class="statistics-table__container overflow-auto lg:w-full">
-        <div class="statistics-table__header items-center justify-between">
-          <h4 class="statistics-table__title">Withdraw Request</h4>
+        <div class="statistics-table__header py-3 items-center justify-between">
+          <h4 class="statistics-table__title">Withdraw Requests</h4>
           <button onclick="switchBetween2Element('withdraw requests')"
             class="new-request__btn bg-invite-link px-3 py-2 gap-[5px] flex items-center text-white text-xs font-light rounded-md">
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
@@ -112,47 +112,46 @@
           </button>
         </div>
         <div
-          class="statistics-table__subheader search__subheader border-b-[#393939]/10 border-b-[1px] grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-10px">
+          class="statistics-table__subheader search__subheader border-b-[1px] border-b-[#393939]/10  grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-10px">
           <div class="input-group gap-1 max-w-[300px] flex flex-col">
             <label for="email" class="text-normal font-light">Email:</label>
             <input type="email" id="email" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Email..." />
+              placeholder="Enter Email...">
           </div>
           <div class="input-group gap-1 max-w-[300px] flex flex-col">
             <label for="walletAddress" class="text-normal font-light">Wallet Address:</label>
             <input type="text" id="walletAddress"
               class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Wallet Address..." />
+              placeholder="Enter Wallet Address...">
           </div>
           <div class="input-group gap-1 max-w-[300px] flex flex-col">
             <label for="referenceCode" class="text-normal font-light">Reference Code:</label>
             <input type="text" id="referenceCode"
               class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Reference Code..." />
+              placeholder="Enter Reference Code...">
           </div>
           <div class="input-group gap-1 max-w-[300px] flex flex-col">
-            <button class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">
-              Search
-            </button>
+            <button
+              class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">Search</button>
           </div>
         </div>
-        <div class="statistics-table__subheader group-actions__subheader flex flex-col gap-[10px] p-10px">
+        <div class="statistics-table__subheader flex flex-col gap-[10px] p-10px">
           <h4 class="text-[15px] text-normal font-light">Group Actions</h4>
           <div class="pl-5 flex gap-2">
             <button onclick="togglePopup('approve')"
               class="btn__green flex items-center gap-1 bg-profit-amount px-4 py-2 rounded-10px text-white text-xs font-light">
               <img src="/public/images/icon/deposit_requests/Check.svg" alt="check-img" />
-              Paid
+              Approve
             </button>
             <button onclick="togglePopup('deleted')"
               class="btn__red flex items-center gap-1 bg-withdrawal-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-              <img src="/public/images/icon/withdraw_requests/Close.svg" alt="delete-img" />
-              Reject
+              <img src="/public/images/icon/deposit_requests/Delete.svg" alt="delete-img" />
+              Delete
             </button>
           </div>
         </div>
-        <div class="withdraw-requests__table">
-          <div class="table w-full p-5 pt-10px min-w-[1100px]">
+        <div class="withdraw-requests__table overflow-auto">
+          <div class="table w-full p-5 pt-10px  min-w-[1100px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
                 <input type="checkbox" onchange="selectAllTableRows(this)"
@@ -273,6 +272,7 @@
           </div>
         </div>
       </div>
+      <!-- new withdraw request -->
       <section class="new-withdraw-request hidden card card__hover w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Withdraw Request</h4>
@@ -288,7 +288,6 @@
                 <p class="text-xs font-light">Your withdrawal request will be sent to wallet address.</p>
               </div>
             </div>
-
             <div class="new-withdraw-request__form ">
               <form class="sm:max-w-[300px]">
                 <div class="input-group flex flex-col gap-[5px]">
@@ -346,25 +345,25 @@
       </section>
     </section>
   </div>
+  </div>
+  </div>
   <div
     class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12" />
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
     <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Paid</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">
-        your request paid successfuly
-      </p>
+      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
     </div>
   </div>
   <div
     class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12" />
+    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
     <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Reject</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">
-        your request rejected successfuly
-      </p>
+      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
+      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
     </div>
+  </div>
+
   </div>
 </body>
 

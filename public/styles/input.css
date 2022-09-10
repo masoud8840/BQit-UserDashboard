@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,11 +25,11 @@
   }
 
   .container {
-    @apply mx-auto flex gap-5 py-5 xl:gap-[35px] max-w-7xl items-start;
+    @apply mx-auto flex px-10px gap-5 py-5 xl:gap-[35px] max-w-7xl items-start;
   }
 
   .navigation__container {
-    @apply bg-white h-fit rounded-25px py-30px px-10px md:min-w-[205px];
+    @apply bg-white h-fit rounded-25px py-30px px-10px md:min-w-[240px];
   }
 
   .logo__container {
@@ -95,7 +96,7 @@
   }
 
   .profile-showcase__container {
-    @apply flex flex-col items-center bg-white rounded-25px py-5 xl:w-[285px] hover:drop-shadow-md transition-all duration-150;
+    @apply flex flex-col items-center bg-white rounded-25px py-5 xl:w-[259px] hover:drop-shadow-md transition-all duration-150;
   }
 
   .profile-showcase__inner {
@@ -234,7 +235,7 @@
   .badge {
     @apply text-white py-[3px] px-2 w-fit text-center rounded-[3px] text-xs font-light;
   }
-  
+
   .badge__green {
     @apply bg-[#34BFA3];
   }
@@ -250,14 +251,13 @@
   .table-btn__active {
     @apply border-b-2 border-b-[#FF9900] text-[#ff9900];
   }
-  
+
   .input::placeholder {
     @apply text-lightgray text-xs font-light;
   }
   .submenu__item-active {
-    @apply bg-navigation__active text-white
+    @apply bg-navigation__active text-white;
   }
-
 }
 
 .navigation__link.active {
@@ -395,9 +395,13 @@ input::placeholder {
   font-weight: 300;
 }
 
-
-
-
+h4,
+p,
+span,
+button,
+a {
+  font-family: "Ubuntu", sans-serif;
+}
 @media (min-width: 1024px) {
   .gallery-management .table__header {
     display: grid;
@@ -409,5 +413,3 @@ input::placeholder {
     grid-template-columns: 0.15fr 0.2fr 0.3fr 1fr 0.4fr;
   }
 }
-
-
