@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--  Linking style file  -->
-    <link rel="stylesheet" href="/public/styles/style.css" />
-    <!-- Linking script file -->
-    <script src="/public/scripts/script.js" defer></script>
-    <link rel="shortcut icon" href="/public/images/Logo.svg">
+  <!--  Linking style file  -->
+  <link rel="stylesheet" href="/public/styles/style.css" />
+  <!-- Linking script file -->
+  <script src="/public/scripts/script.js" defer></script>
+  <link rel="shortcut icon" href="/public/images/Logo.svg">
   <title>BQit | Deposit Requests</title>
 </head>
 
@@ -22,107 +22,58 @@
       <ul class="navigation__inner">
         <li class="navigation__list">
           <a href="./index.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Dashboard.svg"
-              alt="dashboard-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img" class="navigation__img" />
             <span class="navigation__text">Dashboard</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="#joineology" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Jineology.svg"
-              alt="jineology-img"
-              class="navigation__img"
-            />
-            <span class="navigation__text">Jineology</span>
+          <a href="./ChargeWallet.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Charge_Wallet.svg" alt="charge-wallet__img" class="navigation__img" />
+            <span class="navigation__text">Charge Wallet</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./TreeDiagram.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Tree_Diagram.svg"
-              alt="tree-diagram-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img" class="navigation__img" />
             <span class="navigation__text">Tree Diagram</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./DepositRequests.html" class="navigation__link active">
-            <img
-              src="/public/images/icon/menu/Deposit_Requests_Active.svg"
-              alt="deposit-request-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Deposit_Requests_Active.svg" alt="deposit-request-img"
+              class="navigation__img" />
             <span class="navigation__text">Deposit Requests</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="./UserManagement.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/User_Management.svg"
-              alt="user-management-img"
-              class="navigation__img"
-            />
-            <span class="navigation__text">User Management</span>
-          </a>
-        </li>
-        <li class="navigation__list">
           <a href="./WithdrawRequests.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Withdraw_Request.svg"
-              alt="withdraw-requests-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
+              class="navigation__img" />
             <span class="navigation__text">Withdraw Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./GalleryManagements.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Gallery_Management.svg"
-              alt="gallery-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
+              class="navigation__img" />
             <span class="navigation__text">Gallery Management</span>
           </a>
         </li>
         <li class="navigation__list">
-          <a href="./AdminManagement.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Admin_Management.svg"
-              alt="admin-management-img"
-              class="navigation__img"
-            />
-            <span class="navigation__text">Admin Management</span>
-          </a>
-        </li>
-        <li class="navigation__list">
           <a href="./Reports.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Reports.svg"
-              alt="reports-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Reports.svg" alt="reports-img" class="navigation__img" />
             <span class="navigation__text">Reports</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#logout" class="navigation__link mt-20">
-            <img
-              src="/public/images/icon/menu/Logout.svg"
-              alt="logout-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
             <span class="navigation__text">Logout</span>
           </a>
         </li>
       </ul>
     </nav>
-    <section class="deposit-requests overflow-auto flex flex-col gap-5">
+    <section class="deposit-requests w-full overflow-auto flex flex-col gap-5">
       <div class="withdraw-requests__header">
         <a href="./Settings.html" class="btn__settings">
           <img src="/public/images/icon/dashboard/Settings.svg" alt="settings-img" class="w-5" />
@@ -149,24 +100,9 @@
             </li>
             <li>
               <button class="table__btn text-sm lg:text-lg"
-                onclick="toggleDepositRequestsTabs('history requests', this)">Hisstory Requests</button>
+                onclick="toggleDepositRequestsTabs('history requests', this)">History Requests</button>
             </li>
           </ul>
-        </div>
-        <div class="statistics-table__subheader flex flex-col gap-[10px] p-10px">
-          <h4 class="text-[15px] text-normal font-light">Group Actions</h4>
-          <div class="pl-5 flex gap-2">
-            <button onclick="togglePopup('approve')"
-              class="btn__green flex items-center gap-1 bg-profit-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-              <img src="/public/images/icon/deposit_requests/Check.svg" alt="check-img" />
-              Approve
-            </button>
-            <button onclick="togglePopup('deleted')"
-              class="btn__red flex items-center gap-1 bg-withdrawal-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-              <img src="/public/images/icon/deposit_requests/Delete.svg" alt="delete-img" />
-              Delete
-            </button>
-          </div>
         </div>
         <div class="active-users__table overflow-auto">
           <div class="table deposit-requests__table w-full p-5 pt-10px min-w-[1300px]">
@@ -210,14 +146,14 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">IN_PROGRESS</span>
+                <span class="table-row__data badge bg-badge__green">IN_PROGRESS</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -233,14 +169,14 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">IN_PROGRESS</span>
+                <span class="table-row__data badge bg-badge__green">IN_PROGRESS</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -256,14 +192,14 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">IN_PROGRESS</span>
+                <span class="table-row__data badge bg-badge__green">IN_PROGRESS</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -279,14 +215,14 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">IN_PROGRESS</span>
+                <span class="table-row__data badge bg-badge__green">IN_PROGRESS</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -339,14 +275,14 @@
                 <span class="text-normal table-row__data">Mohammad</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">Active</span>
+                <span class="table-row__data badge bg-badge__green">Active</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -362,14 +298,14 @@
                 <span class="text-normal table-row__data">Mohammad</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">Active</span>
+                <span class="table-row__data badge bg-badge__green">Active</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -385,14 +321,14 @@
                 <span class="text-normal table-row__data">Mohammad</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">Active</span>
+                <span class="table-row__data badge bg-badge__green">Active</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -408,14 +344,14 @@
                 <span class="text-normal table-row__data">Mohammad</span>
                 <span class="text-normal table-row__data">1800</span>
                 <span class="text-invite-link table-row__data">
-                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881eeb81c0af5b6fb8
+                  372f19ab552ecf82519c5fa65f6393835f1df187dcdc8a881ee
                 </span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
-                <span class="table-row__data badge badge-green">Active</span>
+                <span class="table-row__data badge bg-badge__green">Active</span>
                 <span class="text-normal table-row__data">2022-08-28 08:51:57
                 </span>
                 <div class="table-row__data flex justify-center gap-2">
-                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]">
+                  <button class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px] show-request-submit-btn">
                     <img src="/public/images/icon/deposit_requests/Edit.svg" alt="edit-img" class="w-5" />
                   </button>
                   <a href="#" class="hover:bg-[#716ACA]/[6%] p-1 rounded-[3px]"><img
@@ -426,6 +362,62 @@
           </div>
         </div>
       </div>
+
+        <!-- Show Deposit Request -->
+      <section class="show-deposit-request hidden statistics-tables w-full">
+        <div class="statistics-table__container lg:w-full">
+          <div class="statistics-table__header">
+            <h4 class="statistics-table__title">Show Deposit Request</h4>
+          </div>
+          <form class="show-deposit-request__inner flex flex-col p-10px lg:p-5 gap-[10px] lg:gap-5 max-w-[300px]">
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="username" class="new-gallery-image__label text-normal text-sm font-light">Username:</label>
+              <input type="text" id="username"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="currency" class="new-gallery-image__label text-normal text-sm font-light">Currency:</label>
+              <input type="text" id="currency"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="amount" class="new-gallery-image__label text-normal text-sm font-light">Amount:</label>
+              <input type="number" id="amount"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="transaction-hash" class="new-gallery-image__label text-normal text-sm font-light">Transaction
+                hash:</label>
+              <input type="text" id="transaction-hash"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="description"
+                class="new-gallery-image__label text-normal text-sm font-light">Description:</label>
+              <input type="text" id="description"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="admin-description" class="new-gallery-image__label text-normal text-sm font-light">Admin
+                description:</label>
+              <input type="text" id="admin-description"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="input-group flex flex-col gap-[10px]">
+              <label for="created-at" class="new-gallery-image__label text-normal text-sm font-light">Created
+                at:</label>
+              <input type="datetime-local" id="created-at"
+                class="new-gallery-image__input border-[1px] border-[#393939]/10 px-2 h-9 text-sm rounded-[5px]" />
+            </div>
+            <div class="flex py-4 pt-2 gap-[10px]">
+              <button
+                class="btn__primary bg-badge__green text-white rounded-[5px] p-2 px-4 m-0 text-xs font-light">Submit</button>
+              <button
+                class="btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">Cancell</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </section>
     <div
       class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
@@ -445,6 +437,7 @@
     </div>
 
   </div>
+
 </body>
 
 </html>

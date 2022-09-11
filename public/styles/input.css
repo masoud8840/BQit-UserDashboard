@@ -366,22 +366,22 @@ input.table-header__title:checked {
 
 .referral-profit__table .table__header {
   display: grid;
-  grid-template-columns: 0.3fr 0.35fr 0.65fr 0.65fr 0.5fr 0.4fr 0.4fr 0.45fr;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
 }
 
 .referral-profit__table .table__row {
   display: grid;
-  grid-template-columns: 0.3fr 0.35fr 0.65fr 0.65fr 0.5fr 0.4fr 0.4fr 0.45fr;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
 }
 
 .deposit-profit__table .table__header {
   display: grid;
-  grid-template-columns: 0.3fr 0.35fr 0.65fr 0.65fr 0.5fr 0.4fr 0.4fr;
+  grid-template-columns: 0.5fr 1fr;
 }
 
 .deposit-profit__table .table__row {
   display: grid;
-  grid-template-columns: 0.3fr 0.35fr 0.65fr 0.65fr 0.5fr 0.4fr 0.4fr;
+  grid-template-columns: 0.5fr 1fr;
 }
 
 input[type="date"]::-webkit-inner-spin-button,

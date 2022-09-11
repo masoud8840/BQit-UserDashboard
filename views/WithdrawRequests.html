@@ -27,9 +27,9 @@
           </a>
         </li>
         <li class="navigation__list">
-          <a href="#joineology" class="navigation__link">
-            <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
-            <span class="navigation__text">Jineology</span>
+          <a href="./ChargeWallet.html" class="navigation__link">
+            <img src="/public/images/icon/menu/Charge_Wallet.svg" alt="charge-wallet__img" class="navigation__img" />
+            <span class="navigation__text">Charge Wallet</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
@@ -46,12 +46,6 @@
           </a>
         </li>
         <li class="navigation__list">
-          <a href="./UserManagement.html" class="navigation__link">
-            <img src="/public/images/icon/menu/User_Management.svg" alt="user-management-img" class="navigation__img" />
-            <span class="navigation__text">User Management</span>
-          </a>
-        </li>
-        <li class="navigation__list">
           <a href="./WithdrawRequests.html" class="navigation__link active">
             <img src="/public/images/icon/menu/Withdraw_Request_Active.svg" alt="withdraw-requests-img"
               class="navigation__img" />
@@ -63,13 +57,6 @@
             <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
               class="navigation__img" />
             <span class="navigation__text">Gallery Management</span>
-          </a>
-        </li>
-        <li class="navigation__list">
-          <a href="./AdminManagement.html" class="navigation__link">
-            <img src="/public/images/icon/menu/Admin_Management.svg" alt="admin-management-img"
-              class="navigation__img" />
-            <span class="navigation__text">Admin Management</span>
           </a>
         </li>
         <li class="navigation__list">
@@ -110,45 +97,6 @@
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
             New Request
           </button>
-        </div>
-        <div
-          class="statistics-table__subheader search__subheader border-b-[1px] border-b-[#393939]/10  grid grid-cols-1 lg:grid-cols-3 gap-[10px] p-10px">
-          <div class="input-group gap-1 max-w-[300px] flex flex-col">
-            <label for="email" class="text-normal font-light">Email:</label>
-            <input type="email" id="email" class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Email...">
-          </div>
-          <div class="input-group gap-1 max-w-[300px] flex flex-col">
-            <label for="walletAddress" class="text-normal font-light">Wallet Address:</label>
-            <input type="text" id="walletAddress"
-              class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Wallet Address...">
-          </div>
-          <div class="input-group gap-1 max-w-[300px] flex flex-col">
-            <label for="referenceCode" class="text-normal font-light">Reference Code:</label>
-            <input type="text" id="referenceCode"
-              class="border border-[#393939]/10 rounded-[5px] h-8 px-2 text-xs font-light"
-              placeholder="Enter Reference Code...">
-          </div>
-          <div class="input-group gap-1 max-w-[300px] flex flex-col">
-            <button
-              class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">Search</button>
-          </div>
-        </div>
-        <div class="statistics-table__subheader flex flex-col gap-[10px] p-10px">
-          <h4 class="text-[15px] text-normal font-light">Group Actions</h4>
-          <div class="pl-5 flex gap-2">
-            <button onclick="togglePopup('approve')"
-              class="btn__green flex items-center gap-1 bg-profit-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-              <img src="/public/images/icon/deposit_requests/Check.svg" alt="check-img" />
-              Approve
-            </button>
-            <button onclick="togglePopup('deleted')"
-              class="btn__red flex items-center gap-1 bg-withdrawal-amount px-4 py-2 rounded-10px text-white text-xs font-light">
-              <img src="/public/images/icon/deposit_requests/Delete.svg" alt="delete-img" />
-              Delete
-            </button>
-          </div>
         </div>
         <div class="withdraw-requests__table overflow-auto">
           <div class="table w-full p-5 pt-10px  min-w-[1100px]">
@@ -211,7 +159,7 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
                 <span class="text-invite-link table-row__data">5000 TRX</span>
-                <span class="text-white table-row__data badge badge__yellow">PENDING</span>
+                <span class="text-white table-row__data badge bg-badge__green">Paid</span>
                 <span class="text-normal table-row__data">2022-08-20 08:15:26</span>
                 <div class="table-row__data flex justify-center gap-2">
                   <button class="bg-search-btn text-white flex items-center gap-[5px] p-1 px-2 rounded-[3px]">
@@ -233,7 +181,7 @@
                 <span class="text-normal table-row__data">Hesam</span>
                 <span class="text-normal table-row__data">TP7eYwWDTSxvdBDkJnCoe6Lst7uqEogHxr</span>
                 <span class="text-invite-link table-row__data">5000 TRX</span>
-                <span class="text-white table-row__data badge badge__yellow">PENDING</span>
+                <span class="text-white table-row__data badge bg-badge__red">REJECTED</span>
                 <span class="text-normal table-row__data">2022-08-20 08:15:26</span>
                 <div class="table-row__data flex justify-center gap-2">
                   <button class="bg-search-btn text-white flex items-center gap-[5px] p-1 px-2 rounded-[3px]">
