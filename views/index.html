@@ -12,7 +12,7 @@
     <title>BQit | Dashboard</title>
   </head>
 
-  <body class="bg-[#fafafd]">
+  <body class="bg-[#22577a]/[4%]">
     <div class="container">
       <nav class="navigation__container">
         <div class="logo__container">
@@ -140,7 +140,7 @@
               <h4 class="user__name">Hesam Safari</h4>
               <p class="user__email">hesamsafari@gmail.com</p>
               <div class="user__password flex">
-                <button class="password-toggler">
+                <button class="password-toggler" onclick="togglePasswordVisibility()">
                   <img
                     src="/public/images/icon/dashboard/Eye.svg"
                     alt="eye-img"
@@ -167,6 +167,9 @@
                     src="/public/images/icon/dashboard/PasswordCharecter.svg"
                     alt="password"
                   />
+                </div>
+                <div class="user__password-text hidden">
+                  <p class="text-normal">your password</p>
                 </div>
               </div>
             </div>

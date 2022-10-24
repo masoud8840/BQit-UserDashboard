@@ -13,7 +13,7 @@
   <title>BQit | Reports</title>
 </head>
 
-<body class="bg-[#fafafe]">
+<body class="bg-[#22577a]/[4%]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
@@ -124,15 +124,15 @@
           <ul class="flex gap-[15px]">
             <li>
               <button class="table__btn text-sm lg:text-lg table-btn__active"
-                onclick="toggleDepositRequestsTabs('referral profit', this)">Referral Profits</button>
+                onclick="toggleActiveTab('reports-tabs', 0)">Referral Profits</button>
             </li>
             <li>
               <button class="table__btn text-sm lg:text-lg"
-                onclick="toggleDepositRequestsTabs('deposit profit', this)">Deposit Profits</button>
+                onclick="toggleActiveTab('reports-tabs', 1)">Deposit Profits</button>
             </li>
           </ul>
         </div>
-        <div class="referral-profit__table overflow-auto">
+        <div class="reports-tabs referral-profit__table overflow-auto">
           <div class="table reports__table w-full p-5 pt-10px">
             <div class="table__header">
               <div>
@@ -171,7 +171,7 @@
         </div>
 
         <!-- deposit profit -->
-        <div class="deposit-profit__table hidden overflow-auto">
+        <div class="reports-tabs deposit-profit__table hidden overflow-auto">
           <div class="table reports__table w-full p-5 pt-10px">
             <div class="table__header">
               <div>
@@ -205,23 +205,6 @@
   </div>
   </div>
   </div>
-  <div
-    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
-    </div>
-  </div>
-  <div
-    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
-    </div>
-  </div>
-
   </div>
 </body>
 

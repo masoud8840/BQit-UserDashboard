@@ -13,7 +13,7 @@
   <title>BQit | Withdraw Requests</title>
 </head>
 
-<body class="bg-[#fafafe]">
+<body class="bg-[#22577a]/[4%]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
@@ -89,10 +89,10 @@
           </a>
         </div>
       </div>
-      <div class="statistics-table__container overflow-auto lg:w-full">
+      <div class="withdraw-requests-from statistics-table__container overflow-auto lg:w-full">
         <div class="statistics-table__header py-3 items-center justify-between">
           <h4 class="statistics-table__title">Withdraw Requests</h4>
-          <button onclick="switchBetween2Element('withdraw requests')"
+          <button onclick="toggleActiveComponent('.withdraw-requests-from','.withdraw-requests-to')"
             class="new-request__btn bg-invite-link px-3 py-2 gap-[5px] flex items-center text-white text-xs font-light rounded-md">
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
             New Request
@@ -102,7 +102,7 @@
           <div class="table w-full p-5 pt-10px  min-w-[1100px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
-                <input type="checkbox" onchange="selectAllTableRows(this)"
+                <input type="checkbox" onchange="selectAllRows()"
                   class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
               </div>
               <div>
@@ -221,7 +221,7 @@
         </div>
       </div>
       <!-- new withdraw request -->
-      <section class="new-withdraw-request hidden card card__hover w-full">
+      <section class="withdraw-requests-to new-withdraw-request hidden card card__hover w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Withdraw Request</h4>
         </div>

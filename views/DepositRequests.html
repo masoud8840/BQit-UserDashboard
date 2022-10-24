@@ -13,7 +13,7 @@
   <title>BQit | Deposit Requests</title>
 </head>
 
-<body class="bg-[#fafafe]">
+<body class="bg-[#22577a]/[4%]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
@@ -95,20 +95,21 @@
           <ul class="flex gap-[15px]">
             <li>
               <button class="table__btn text-sm lg:text-lg table-btn__active"
-                onclick="toggleDepositRequestsTabs('active users', this)">Active
+                onclick="toggleActiveTab('deposit-requests-tabs', 0)">Active
                 Users</button>
             </li>
             <li>
               <button class="table__btn text-sm lg:text-lg"
-                onclick="toggleDepositRequestsTabs('history requests', this)">History Requests</button>
+                onclick="toggleActiveTab('deposit-requests-tabs', 1)">History
+                Requests</button>
             </li>
           </ul>
         </div>
-        <div class="active-users__table overflow-auto">
+        <div class="deposit-requests-tabs active-users__table overflow-auto">
           <div class="table deposit-requests__table w-full p-5 pt-10px min-w-[1300px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
-                <input type="checkbox" onchange="selectAllTableRows(this)"
+                <input type="checkbox" onchange="selectAllRows()"
                   class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
               </div>
               <div>
@@ -233,11 +234,11 @@
           </div>
         </div>
         <!-- History Requests -->
-        <div class="history-requests__table hidden overflow-auto">
+        <div class="deposit-requests-tabs history-requests__table hidden overflow-auto">
           <div class="table deposit-requests__table w-full p-5 pt-10px min-w-[1300px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
-                <input type="checkbox" onchange="selectAllTableRows(this)"
+                <input type="checkbox" onchange="selectAllRows()"
                   class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
               </div>
               <div>
@@ -363,7 +364,7 @@
         </div>
       </div>
 
-        <!-- Show Deposit Request -->
+      <!-- Show Deposit Request -->
       <section class="show-deposit-request hidden statistics-tables w-full">
         <div class="statistics-table__container lg:w-full">
           <div class="statistics-table__header">

@@ -13,7 +13,7 @@
   <title>BQit | Settings</title>
 </head>
 
-<body class="bg-[#fafafe]">
+<body class="bg-[#22577a]/[4%]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
@@ -96,7 +96,7 @@
             <h4 class="user__name">Hesam Safari</h4>
             <p class="user__email">hesamsafari@gmail.com</p>
             <div class="user__password flex">
-              <button class="password-toggler">
+              <button class="password-toggler" onclick="togglePasswordVisibility()">
                 <img src="/public/images/icon/dashboard/Eye.svg" alt="eye-img" />
               </button>
               <div class="user__password-character">
@@ -105,6 +105,9 @@
                 <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
                 <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
                 <img src="/public/images/icon/dashboard/PasswordCharecter.svg" alt="password" />
+              </div>
+              <div class="user__password-text hidden">
+                <p class="text-normal">password</p>
               </div>
             </div>
             <div class="user__deposit flex border-t-[1px] w-full pt-4 pb-2  items-baseline gap-1">
@@ -122,14 +125,14 @@
           <ul class="flex gap-[15px] border-b-[#393939]/10 border-b-[1px] px-10px lg:px-5">
             <li>
               <button class="table__btn text-sm xl:text-lg table-btn__active"
-                onclick="toggleDepositRequestsTabs('update profile', this)">Update Profile</button>
+                onclick="toggleActiveTab('setting-tabs', 0)">Update Profile</button>
             </li>
             <li>
-              <button class="table__btn text-sm xl:text-lg"
-                onclick="toggleDepositRequestsTabs('change password', this)">Change Password</button>
+              <button class="table__btn text-sm xl:text-lg" onclick="toggleActiveTab('setting-tabs', 1)">Change
+                Password</button>
             </li>
           </ul>
-          <div class="settings__update-profile">
+          <div class="setting-tabs settings__update-profile">
             <h4 class="text-[23px] text-normal h-fit mt-5 mb-10px ml-10px lg:ml-5">Personal Details</h4>
             <div class="p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
               <div class="input-group gap-1 max-w-[300px] flex flex-col">
@@ -154,7 +157,7 @@
               </div>
             </div>
           </div>
-          <div class="hidden settings__change-password p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
+          <div class="hidden setting-tabs settings__change-password p-10px lg:p-5 grid grid-rows-3 gap-[10px] lg:gap-5">
             <div class="input-group gap-1 max-w-[300px] flex flex-col">
               <label for="current-password" class="text-normal text-xs font-light">Current Password:</label>
               <input type="password" id="current-password"

@@ -13,7 +13,7 @@
   <title>BQit | Charge Wallet</title>
 </head>
 
-<body class="bg-[#fafafe]">
+<body class="bg-[#22577a]/[4%]">
   <div class="container relative">
     <nav class="navigation__container">
       <div class="logo__container">
@@ -28,7 +28,8 @@
         </li>
         <li class="navigation__list">
           <a href="./ChargeWallet.html" class="navigation__link active">
-            <img src="/public/images/icon/menu/Charge_Wallet_Active.svg" alt="charge-wallet__img" class="navigation__img" />
+            <img src="/public/images/icon/menu/Charge_Wallet_Active.svg" alt="charge-wallet__img"
+              class="navigation__img" />
             <span class="navigation__text">Charge Wallet</span>
           </a>
         </li>
@@ -89,9 +90,9 @@
           </a>
         </div>
       </div>
-      <section class="charge-wallet card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
+      <form class="charge-wallet card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
         <div class="statistics-table__header items-center justify-between">
-          <h4 class="statistics-table__title">Create Image</h4>
+          <h4 class="statistics-table__title">Charge Wallet</h4>
         </div>
         <div class="inline-flex items-center ml-10px lg:ml-5 mt-5 rounded-[5px] max-w-[360px] gap-3 p-3 bg-invite-link">
           <img src="/public/images/icon/charge_wallet/Info.svg" alt="info-icon">
@@ -136,33 +137,13 @@
               class="pointer-events-none p-2 text-sm text-white bg-invite-link rounded-[4px] font-light w-16 absolute bottom-[1px] right-[1px]">Browse</button>
           </div>
           <div class="flex py-4 pt-2 gap-[10px]">
-            <button
+            <button type="submit"
               class="btn__primary bg-badge__green text-white rounded-[5px] p-2 px-4 m-0 text-xs font-light">Submit</button>
-            <button
+            <button type="button"
               class="btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">Cancell</button>
           </div>
-      </section>
+      </form>
     </section>
-  </div>
-  <div
-    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12" />
-    <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">
-        your request approved successfuly
-      </p>
-    </div>
-  </div>
-  <div
-    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12" />
-    <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">
-        your request deleted successfuly
-      </p>
-    </div>
   </div>
   <script>
     const copy = () => {
