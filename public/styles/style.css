@@ -588,8 +588,7 @@ video {
 }
 
 .table__body .table__row:nth-child(even){
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 248 253 / var(--tw-bg-opacity));
+  background-color: rgb(34 87 122 / 4%);
 }
 
 .container{
@@ -1425,10 +1424,6 @@ video {
   width: 1rem;
 }
 
-.w-7{
-  width: 1.75rem;
-}
-
 .w-40{
   width: 10rem;
 }
@@ -1439,6 +1434,10 @@ video {
 
 .w-24{
   width: 6rem;
+}
+
+.w-7{
+  width: 1.75rem;
 }
 
 .min-w-\[1300px\]{
@@ -1595,16 +1594,16 @@ video {
   border-width: 1px;
 }
 
-.border-r-4{
-  border-right-width: 4px;
-}
-
 .border-t-\[1px\]{
   border-top-width: 1px;
 }
 
 .border-b-\[1px\]{
   border-bottom-width: 1px;
+}
+
+.border-r-4{
+  border-right-width: 4px;
 }
 
 .border-\[\#393939\]\/10{
@@ -1620,6 +1619,10 @@ video {
   border-color: rgb(74 74 74 / 0.1);
 }
 
+.border-b-\[\#393939\]\/10{
+  border-bottom-color: rgb(57 57 57 / 0.1);
+}
+
 .border-r-green-400{
   --tw-border-opacity: 1;
   border-right-color: rgb(74 222 128 / var(--tw-border-opacity));
@@ -1628,10 +1631,6 @@ video {
 .border-r-red-400{
   --tw-border-opacity: 1;
   border-right-color: rgb(248 113 113 / var(--tw-border-opacity));
-}
-
-.border-b-\[\#393939\]\/10{
-  border-bottom-color: rgb(57 57 57 / 0.1);
 }
 
 .bg-\[\#22577a\]\/\[4\%\]{
@@ -1686,11 +1685,6 @@ video {
 .bg-badge__purple{
   --tw-bg-opacity: 1;
   background-color: rgb(88 103 221 / var(--tw-bg-opacity));
-}
-
-.bg-red-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .p-3{
@@ -1779,10 +1773,6 @@ video {
   padding-top: 10px;
 }
 
-.pr-3{
-  padding-right: 0.75rem;
-}
-
 .pt-4{
   padding-top: 1rem;
 }
@@ -1793,6 +1783,10 @@ video {
 
 .pl-2{
   padding-left: 0.5rem;
+}
+
+.pr-3{
+  padding-right: 0.75rem;
 }
 
 .text-xs{
@@ -1850,11 +1844,6 @@ video {
   color: rgb(88 103 221 / var(--tw-text-opacity));
 }
 
-.text-\[\#a9a9a9\]{
-  --tw-text-opacity: 1;
-  color: rgb(169 169 169 / var(--tw-text-opacity));
-}
-
 .text-withdrawal-amount{
   --tw-text-opacity: 1;
   color: rgb(244 81 108 / var(--tw-text-opacity));
@@ -1863,6 +1852,11 @@ video {
 .text-badge__green{
   --tw-text-opacity: 1;
   color: rgb(52 191 163 / var(--tw-text-opacity));
+}
+
+.text-\[\#a9a9a9\]{
+  --tw-text-opacity: 1;
+  color: rgb(169 169 169 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -2066,10 +2060,6 @@ a {
 
 .hover\:bg-\[\#393939\]\/5:hover{
   background-color: rgb(57 57 57 / 0.05);
-}
-
-.hover\:bg-\[red\]\/\[6\%\]:hover{
-  background-color: rgb(255 0 0 / 6%);
 }
 
 .hover\:drop-shadow-md:hover{

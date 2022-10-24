@@ -21,7 +21,7 @@
 
 @layer components {
   .table__body .table__row:nth-child(even) {
-    @apply bg-[#F8F8FD];
+    @apply bg-[#22577a]/[4%];
   }
 
   .container {
