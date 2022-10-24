@@ -1634,9 +1634,8 @@ video {
   border-bottom-color: rgb(57 57 57 / 0.1);
 }
 
-.bg-\[\#fafafe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 254 / var(--tw-bg-opacity));
+.bg-\[\#22577a\]\/\[4\%\]{
+  background-color: rgb(34 87 122 / 4%);
 }
 
 .bg-white{
@@ -1657,11 +1656,6 @@ video {
 .bg-\[\#ECECEC\]{
   --tw-bg-opacity: 1;
   background-color: rgb(236 236 236 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#fafafd\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 253 / var(--tw-bg-opacity));
 }
 
 .bg-search-btn{
@@ -1694,77 +1688,9 @@ video {
   background-color: rgb(88 103 221 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#22577a\]{
+.bg-red-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(34 87 122 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#22577aff\]{
-  background-color: #22577aff;
-}
-
-.bg-\[\#22577abb\]{
-  background-color: #22577abb;
-}
-
-.bg-\[\#22577afa\]{
-  background-color: #22577afa;
-}
-
-.bg-\[\#22577afd\]{
-  background-color: #22577afd;
-}
-
-.bg-\[\#2257\]{
-  background-color: #2257;
-}
-
-.bg-\[\#22577a\]\/10{
-  background-color: rgb(34 87 122 / 0.1);
-}
-
-.bg-\[\#22577a\]\/20{
-  background-color: rgb(34 87 122 / 0.2);
-}
-
-.bg-\[\#22577a\]\/30{
-  background-color: rgb(34 87 122 / 0.3);
-}
-
-.bg-\[\#22577a\]\/50{
-  background-color: rgb(34 87 122 / 0.5);
-}
-
-.bg-\[\#22577a\]\/5{
-  background-color: rgb(34 87 122 / 0.05);
-}
-
-.bg-\[\#22577a\]\/\[5\]{
-  background-color: rgb(34 87 122 / 5);
-}
-
-.bg-\[\#22577a\]\/\[5\%\]{
-  background-color: rgb(34 87 122 / 5%);
-}
-
-.bg-\[\#22577a\]\/\[3\%\]{
-  background-color: rgb(34 87 122 / 3%);
-}
-
-.bg-\[\#22577a\]\/\[2\%\]{
-  background-color: rgb(34 87 122 / 2%);
-}
-
-.bg-\[\#22577a\]\/\[4\%\]{
-  background-color: rgb(34 87 122 / 4%);
-}
-
-.bg-\[\#22577a\]\/\[10\%\]{
-  background-color: rgb(34 87 122 / 10%);
-}
-
-.bg-\[\#1b263b\]\/\[4\%\]{
-  background-color: rgb(27 38 59 / 4%);
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .p-3{
@@ -2140,6 +2066,10 @@ a {
 
 .hover\:bg-\[\#393939\]\/5:hover{
   background-color: rgb(57 57 57 / 0.05);
+}
+
+.hover\:bg-\[red\]\/\[6\%\]:hover{
+  background-color: rgb(255 0 0 / 6%);
 }
 
 .hover\:drop-shadow-md:hover{

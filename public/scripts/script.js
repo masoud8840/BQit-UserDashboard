@@ -31,17 +31,24 @@ function toggleActiveTab(allOtherTabs, activeTabIndex) {
   allTabsBtn[activeTabIndex].classList.add("table-btn__active");
 }
 
-function toggleActiveComponent(from, to) {
+function toggleActiveComponent(from, to, type = null) {
   const fromEl = document.querySelector(from);
   const toEl = document.querySelector(to);
-
+  let detailComponent = document.querySelector(type);
   fromEl.classList.add("hidden");
-  toEl.classList.remove("hidden");
-
   const cancelBtn = document.querySelector(".cancel-btn");
-  if (cancelBtn)
-    cancelBtn.addEventListener("click", () => toggleActiveComponent(to, from));
-  else return;
+  // for show deposit requests details
+  if (type !== null) {
+    detailComponent.classList.remove('hidden')
+    cancelBtn.addEventListener("click", () => toggleActiveComponent('.show-deposit-request', '.statistics-table__container'));
+  }
+  else {
+    // detailComponent.classList.add('hidden')
+    toEl.classList.remove("hidden");
+    if (cancelBtn)
+      cancelBtn.addEventListener("click", () => toggleActiveComponent(to, from));
+    else return;
+  }
 }
 
 let isAllRowsSelected = false;
